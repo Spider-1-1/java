@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class palin
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the positive number: ");
+int a=sc.nextInt();
+int n=a;
+int sum=0,s;
+while(n>0)
+{
+s=n%10;
+sum=sum*10+s;
+n=n/10;
+}
+if(sum==a)
+{
+System.out.println(a+" Number is palindrome");
+}
+else
+{
+System.out.println(a+" Number is not palindrome");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java palin
+Enter the positive number: 121
+121 Number is palindrome
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

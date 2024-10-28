@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class array{
+public static void main(String st[])
+{
+int a;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the array size: ");
+a=sc.nextInt();
+int ar[]=new int[a];
+for(int i=0;i< ar.length;i++)
+{
+System.out.println("Enter the array at ["+i+"] location: ");
+ar[i]=sc.nextInt();
+}
+for(int i=0;i< ar.length;i++)
+{
+for(int j=i+1;j< ar.length;j++)
+{
+if(ar[i]>ar[j])
+{
+int temp=ar[j];
+ar[j]=ar[i];
+ar[i]=temp;
+}
+}
+}
+int size=ar.length;
+for(int i=0;i< size;i++)
+{
+for(int j=i+1;j< size;j++)
+{
+if(ar[i]==ar[j])
+{
+for(int k=j;k< size-1;k++)
+{
+    ar[k]=ar[k+1];
+}
+size--;
+j--;
+}
+}
+}
+System.out.println("After removing of Duplicate arrays are: ");
+for(int i=0;i< size;i++)
+{
+System.out.println(ar[i]);
+}
+if(size< 3)
+{
+System.out.println("No third position in the array");
+}
+else
+{
+System.out.println("The 3rd Largest value is: "+ar[size-3]);
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java array
+Enter the array size:
+5
+Enter the array at [0] location:
+1
+Enter the array at [1] location:
+2
+Enter the array at [2] location:
+3
+Enter the array at [3] location:
+4
+Enter the array at [4] location:
+5
+After removing of Duplicate arrays are:
+1
+2
+3
+4
+5
+The 3rd Largest value is: 3
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

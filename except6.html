@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.FileReader;
+import java.util.Scanner;
+
+class B extends Exception
+{
+public String getMessage()
+{
+return " Number is duplicate";
+}
+}
+
+class A
+{
+public static void main(String st[]) throws java.io.IOException
+{
+B obj=new B();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the numbers you want to enter");
+int n=sc.nextInt();
+System.out.println("Enter the numbers");
+int ar[]=new int[n];
+for(int i=0;i&lt;n;i++)
+{
+ar[i]=sc.nextInt();
+}
+int k=0;
+try
+{
+for(int i=0;i&lt;n;i++)
+{
+for(int j=i+1;j&lt;n;j++)
+{
+if(ar[i]==ar[j])
+{
+k=ar[i];
+throw obj;
+}
+}
+}
+}
+catch(B b)
+{
+System.out.println(k+b.getMessage());
+}
+}
+}
+
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Enter the numbers you want to enter
+5
+Enter the numbers
+23
+54
+76
+23
+56
+23 Number is duplicate
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+
+interface Sortable {
+void sort(int[] array);
+}
+
+
+class QuickSort implements Sortable {
+@Override
+public void sort(int[] array) {
+quickSort(array, 0, array.length - 1);
+}
+
+private void quickSort(int[] array, int low, int high) {
+if (low < high) {
+int pi = partition(array, low, high);
+quickSort(array, low, pi - 1);
+quickSort(array, pi + 1, high);
+}
+}
+
+private int partition(int[] array, int low, int high) {
+int pivot = array[high]; 
+int i = low - 1; 
+
+for (int j = low; j < high; j++) {
+if (array[j] > pivot) { 
+i++;
+swap(array, i, j);
+}
+}
+swap(array, i + 1, high);
+return i + 1;
+}
+
+private void swap(int[] array, int i, int j) {
+int temp = array[i];
+array[i] = array[j];
+array[j] = temp;
+}
+}
+
+
+class MergeSort implements Sortable {
+@Override
+public void sort(int[] array) {
+if (array.length < 2) {
+return; // Base case
+}
+mergeSort(array, 0, array.length - 1);
+}
+
+private void mergeSort(int[] array, int left, int right) {
+if (left < right) {
+int mid = left + (right - left) / 2;
+
+mergeSort(array, left, mid);
+mergeSort(array, mid + 1, right);
+merge(array, left, mid, right);
+}
+}
+
+private void merge(int[] array, int left, int mid, int right) {
+int n1 = mid - left + 1;
+int n2 = right - mid;
+
+int[] leftArray = new int[n1];
+int[] rightArray = new int[n2];
+
+System.arraycopy(array, left, leftArray, 0, n1);
+System.arraycopy(array, mid + 1, rightArray, 0, n2);
+
+int i = 0, j = 0, k = left;
+
+while (i < n1 && j < n2) {
+if (leftArray[i] > rightArray[j]) { 
+array[k++] = leftArray[i++];
+} else {
+array[k++] = rightArray[j++];
+}
+}
+
+while (i < n1) {
+array[k++] = leftArray[i++];
+}
+while (j < n2) {
+array[k++] = rightArray[j++];
+}
+}
+}
+
+class interfaces {
+public static void main(String[] args) {
+int[] array1 = {5, 3, 8, 6, 2};
+int[] array2 = {7, 4, 1, 9, 0};
+
+Sortable quickSort = new QuickSort();
+Sortable mergeSort = new MergeSort();
+
+
+System.out.println("Array before QuickSort: ");
+printArray(array1);
+quickSort.sort(array1);
+System.out.println("Array after QuickSort (descending): ");
+printArray(array1);
+
+
+System.out.println("\nArray before MergeSort: ");
+printArray(array2);
+mergeSort.sort(array2);
+System.out.println("Array after MergeSort (descending): ");
+printArray(array2);
+}
+
+private static void printArray(int[] array) {
+for (int num : array) {
+System.out.print(num + " ");
+}
+System.out.println();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java interfaces
+Array before QuickSort:
+5 3 8 6 2
+Array after QuickSort (descending):
+8 6 5 3 2
+
+Array before MergeSort:
+7 4 1 9 0
+Array after MergeSort (descending):
+9 7 4 1 0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

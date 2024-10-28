@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Library
+{
+private String title;
+private String author;
+private String isbn;
+ArrayList< String[]> book=new ArrayList<>();
+void addBooks(String t,String a,String i)
+{
+title=t;
+author=a;
+isbn=i;
+String[] b={title,author,isbn};
+book.add(b);
+}
+void removeBooks(String isbn)
+{
+boolean tr=book.removeIf(b->b[2].equals(isbn));
+if(tr)
+{
+System.out.println("Book is removed");
+}
+else
+{
+System.out.println("Can't find the book");
+}
+
+}
+void show()
+{
+if(book.isEmpty())
+{
+System.out.println("There is no Books");
+}
+else
+{
+for(String[] b:book)
+{
+System.out.println("Title: "+b[0]+" Author: "+b[1]+" ISBN: "+b[2]);
+}
+}
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Library obj=new Library();
+obj.addBooks("Java", "Indu Arora","23456" );
+obj.addBooks("PHP","Kalyani","34567");
+obj.removeBooks("23456");
+obj.show();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Book is removed
+Title: PHP Author: Kalyani ISBN: 34567
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

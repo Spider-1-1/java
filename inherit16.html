@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Shape
+{
+abstract void getArea();
+abstract void getPerimeter();
+}
+class Circle extends Shape
+{
+int r;
+Circle(int radious)
+{
+r=radious;
+}
+void getArea()
+{
+double total=3.14*r*r;
+System.out.println("Area of circle is: "+total);
+}
+void getPerimeter()
+{
+double total=2*3.14*r;
+System.out.println("Perimeter of circle is: "+total);
+}
+}
+class Triangle extends Shape
+{
+float s1;
+float s2;
+float s3;
+float base;
+float height;
+Triangle(float side1,float side2,float side3,float base1,float height1)
+{
+s1=side1;
+s2=side2;
+s3=side3;
+base=base1;
+height=height1;
+}
+void getArea()
+{
+double total=0.5*base*height;
+System.out.println("Area of triangle is: "+total);
+}
+void getPerimeter()
+{
+double total=s1+s2+s3;
+System.out.println("Perimeter of triangle is: "+total);
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Shape s=new Circle(7);
+s.getArea();
+s.getPerimeter();
+
+Shape s1=new Triangle(2,3,4,6,8);
+s1.getArea();
+s1.getPerimeter();
+}
+}
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Area of circle is: 153.86
+Perimeter of circle is: 43.96
+Area of triangle is: 24.0
+Perimeter of triangle is: 9.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

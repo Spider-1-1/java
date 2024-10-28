@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+interface Shape
+{
+void getArea();
+}
+class Rectangle implements Shape
+{
+int height;
+int width;
+int total;
+Rectangle(int h,int w)
+{
+height=h;
+width=w;
+}
+public void getArea()
+{
+total=height*width;
+System.out.println("Area of Rectangle is: "+total);
+}
+}
+class Circle implements Shape
+{
+int radious;
+double total;
+Circle(int r)
+{
+radious=r;
+}
+public void getArea()
+{
+total=3.14*radious*radious;
+System.out.println("Area of Circle is: "+total);
+}
+}
+class Triangle implements Shape
+{
+float base;
+float height;
+Triangle(float b,float h)
+{
+base=b;
+height=h;
+}
+public void getArea()
+{
+double total=0.5*base*height;
+System.out.println("Area of Triangle is :"+total);
+}
+}
+class interfaces
+{
+public static void main(String st[])
+{
+Rectangle r=new Rectangle(4,6);
+r.getArea();
+System.out.println();
+
+Circle c=new Circle(5);
+c.getArea();
+System.out.println();
+
+Triangle t=new Triangle(5,6);
+t.getArea();
+
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java interfaces
+Area of Rectangle is: 24
+
+Area of Circle is: 78.5
+
+Area of Triangle is :15.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Vehicle
+{
+abstract void startEngine();
+abstract void stopEngine();
+}
+class Car extends Vehicle
+{
+void startEngine()
+{
+System.out.println("Start the Car Engine");
+}
+void stopEngine()
+{
+System.out.println("Stop the Car Engine");
+}
+}
+class Motorcycle extends Vehicle
+{
+void startEngine()
+{
+System.out.println("Start the Motorcycle Engine");
+}
+void stopEngine()
+{
+System.out.println("Stop the Motorcycle Engine");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Vehicle v=new Car();
+v.startEngine();
+v.stopEngine();
+System.out.println();
+
+Vehicle v1=new Motorcycle();
+v1.startEngine();
+v1.stopEngine();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Start the Car Engine
+Stop the Car Engine
+
+Start the Motorcycle Engine
+Stop the Motorcycle Engine
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

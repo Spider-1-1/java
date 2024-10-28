@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+class func
+{
+public static void main(String st[])
+{
+display();
+}
+static void display()
+{
+DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy:MM:dd  HH:mm:ss");
+LocalDateTime now= LocalDateTime.now();
+System.out.println("Current date and time is: "+date.format(now));
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java func
+Current date and time is: 2024:09:12  17:32:58
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

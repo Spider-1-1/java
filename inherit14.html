@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Base
+{
+void display()
+{
+System.out.println("This is Base class");
+}
+}
+class Sub extends Base
+{
+void display()
+{
+System.out.println("This is Sub class");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Base b=new Base();
+Base ref;
+ref=b;
+ref.display();
+
+Sub s=new Sub();
+ref=s;
+ref.display();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+This is Base class
+This is Sub class
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

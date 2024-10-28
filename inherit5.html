@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class BankAccount
+{
+String account_number;
+double balance;
+BankAccount(String acc,double bal)
+{
+account_number=acc;
+balance=bal;
+}
+void deposit(double amount)
+{
+if(amount>0)
+{
+balance=balance+amount;
+}
+System.out.println("Total balance is: "+balance);
+}
+void withdraw(double amount)
+{
+if(balance>=amount)
+{
+balance=balance-amount;
+System.out.println("After withdraw the money: "+balance);
+}
+else
+{
+System.out.println("Insufficiant Balance");
+}
+}
+}
+class SavingsAccount extends BankAccount
+{
+SavingsAccount(String acc,double bal)
+{
+super(acc,bal);
+}
+void withdraw(double amount)
+{
+if(balance-amount>=100)
+{
+balance=balance-amount;
+System.out.println("After withdraw the amount: "+balance);
+}
+else
+{
+System.out.println("Minimum balance 100 rps required");
+}
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+SavingsAccount s=new SavingsAccount("3344Bob",5335);
+s.deposit(5000);
+s.withdraw(6000);
+s.withdraw(5000);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Total balance is: 10335.0
+After withdraw the amount: 4335.0
+Minimum balance 100 rps required
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

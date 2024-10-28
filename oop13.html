@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Product {
+private String name;
+private int quantity;
+private int threshold;
+
+public Product(String name, int quantity, int threshold) {
+this.name = name;
+this.quantity = quantity;
+this.threshold = threshold;
+}
+
+public String getName() {
+return name;
+}
+
+public int getQuantity() {
+return quantity;
+}
+
+public int getThreshold() {
+return threshold;
+}
+
+public boolean isLowStock() {
+return quantity <= threshold;
+}
+
+@Override
+public String toString() {
+return "Product{name='" + name + "', quantity=" + quantity + ", threshold=" + threshold + "}";
+}
+}
+
+class Inventory {
+private ArrayList< Product> products;
+
+public Inventory() {
+this.products = new ArrayList<>();
+}
+
+public void addProduct(Product p) {
+products.add(p);
+}
+
+public void removeProduct(String name) {
+boolean removed = products.removeIf(product -> product.getName().equals(name));
+if (removed) {
+System.out.println("Product deleted successfully.");
+} else {
+System.out.println("Product not found.");
+}
+}
+
+public void check() {
+boolean anyLowStock = false;
+for (Product p : products) {
+if (p.isLowStock()) {
+System.out.println(p + " is low in quantity.");
+anyLowStock = true;
+}
+}
+if (!anyLowStock) {
+System.out.println("All products are adequately stocked.");
+}
+}
+
+public void show() {
+if (products.isEmpty()) {
+System.out.println("Inventory is empty.");
+} else {
+for (Product p : products) {
+System.out.println(p);
+}
+}
+}
+}
+
+class Main {
+public static void main(String[] args) {
+Inventory inventory = new Inventory();
+inventory.addProduct(new Product("Mouse", 4, 6));
+inventory.addProduct(new Product("Keyboard", 10, 5));
+inventory.addProduct(new Product("Monitor", 4, 19));
+
+System.out.println("Current Inventory:");
+inventory.show();
+
+System.out.println("\nRemoving 'Keyboard'...");
+inventory.removeProduct("Keyboard");
+
+System.out.println("\nChecking Inventory:");
+inventory.check();
+
+System.out.println("\nInventory After Removal:");
+inventory.show();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Current Inventory:
+Product{name='Mouse', quantity=4, threshold=6}
+Product{name='Keyboard', quantity=10, threshold=5}
+Product{name='Monitor', quantity=4, threshold=19}
+
+Removing 'Keyboard'...
+Product deleted successfully.
+
+Checking Inventory:
+Product{name='Mouse', quantity=4, threshold=6} is low in quantity.
+Product{name='Monitor', quantity=4, threshold=19} is low in quantity.
+
+Inventory After Removal:
+Product{name='Mouse', quantity=4, threshold=6}
+Product{name='Monitor', quantity=4, threshold=19}
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

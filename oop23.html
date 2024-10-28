@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+
+class Entering
+{
+static int rollno=1;
+String name;
+String cls;
+void enter()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number of students ");
+int n=sc.nextInt();
+for(int i=0;i< n;i++)
+{
+System.out.println("Enter the name of "+(i+1)+" student: ");
+name=sc.next();
+System.out.println("Enter the class of "+(i+1)+" student: ");
+cls=sc.next();
+System.out.println("The rollno is: "+rollno++);
+}
+}
+public static void main(String st[])
+{
+Entering obj=new Entering();
+obj.enter();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Entering
+Enter the number of students
+2
+Enter the name of 1 student:
+jahid
+Enter the class of 1 student:
+BCA5th
+The rollno is: 1
+Enter the name of 2 student:
+amandeep
+Enter the class of 2 student:
+BCA5th
+The rollno is: 2
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

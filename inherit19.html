@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Employee
+{
+String name;
+int salary;
+String address;
+Employee(String n,int s,String add)
+{
+name=n;
+salary=s;
+address=add;
+}
+abstract int calculate_salary();
+abstract void display_info();
+}
+class Manager extends Employee
+{
+int bonus;
+int total;
+Manager(String n,int s,String add,int b)
+{
+super(n,s,add);
+bonus=b;
+}
+int calculate_salary()
+{
+return bonus+salary;
+}
+void display_info()
+{
+System.out.println("Manager Name: "+name);
+System.out.println("Manager Address: "+address);
+System.out.println("Manager Base Salary: "+salary+" rps");
+System.out.println("Manager Total Salary: "+calculate_salary()+" rps.");
+}
+}
+class Programmer extends Employee
+{
+int bonus;
+int total;
+Programmer(String n,int s,String add,int b)
+{
+super(n,s,add);
+bonus=b;
+}
+int calculate_salary()
+{
+return bonus+salary;
+}
+void display_info()
+{
+System.out.println("Programmer Name: "+name );
+System.out.println("Programmer Address: "+address);
+System.out.println("Programmer Base Salary: "+salary+ " rps");
+System.out.println("Programmer Total Salary: "+calculate_salary()+" rps");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Employee e=new Manager("Jahid",40000,"123 ABC",3000);
+e.display_info();
+System.out.println();
+Employee e1=new Programmer("Harshit",30000,"234 BCD",4000);
+e1.display_info();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Manager Name: Jahid
+Manager Address: 123 ABC
+Manager Base Salary: 40000 rps
+Manager Total Salary: 43000 rps.
+
+Programmer Name: Harshit
+Programmer Address: 234 BCD
+Programmer Base Salary: 30000 rps
+Programmer Total Salary: 34000 rps
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

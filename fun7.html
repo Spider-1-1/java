@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class func
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the string: ");
+String str=sc.nextLine();
+func obj=new func();
+boolean check=obj.pass(str);
+if(check)
+{
+System.out.println("Password is valid");
+}
+else
+{
+System.out.println("Password is not valid");
+}
+}
+boolean pass(String str)
+{
+if(str.length()< 8)
+{
+return false;
+}
+boolean lower=false;
+boolean upper=false;
+boolean digit=false;
+boolean special=false;
+for(int i=0;i< str.length();i++)
+{
+char ch=str.charAt(i);
+if(islower(ch))
+{
+lower=true;
+}
+else if(isupper(ch))
+{
+upper=true;
+}
+else if(isdigit(ch))
+{
+digit=true;
+}
+else if(isspecial(ch))
+{
+special=true;
+}
+}
+return upper && digit && special && lower;
+}
+boolean isdigit(char ch)
+{
+return ch>='0' && ch<='9';
+}
+boolean islower(char ch)
+{
+return ch>='a' && ch<='z';
+}
+boolean isupper(char ch)
+{
+return ch>='A' && ch<='Z';
+}
+boolean isspecial(char ch)
+{
+return ch=='!' || ch=='@' ||ch=='#' ||ch=='$' 
+||ch=='%' ||ch=='^' ||ch=='&' ||ch=='*' ||ch=='(' ||ch==')' 
+||ch=='~' ||ch=='/' ||ch=='<' ||ch=='>' ||ch=='}' ||ch==']';
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java func
+Enter the string:
+Jahid@222
+Password is valid
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

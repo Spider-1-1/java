@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+
+import java.sql.*;
+import java.util.Scanner;
+
+class database
+{
+public static void main(String st[])
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql:
+//localhost:3306/student","root","Jahid@111");
+Statement str=con.createStatement(ResultSet.TYPE_SCROLL_
+INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+ResultSet rs=str.executeQuery("select * from student;");
+Scanner scanner=new Scanner(System.in);
+System.out.println("Insert the row");
+System.out.println("Enter the Rollno");
+int num=scanner.nextInt();
+System.out.println("Enter the Name");
+String name=scanner.next();
+System.out.println("Enter the class");
+String clas=scanner.next();
+System.out.println("Enter the section");
+char section=scanner.next().charAt(0);
+rs.moveToInsertRow();
+
+rs.updateInt("Rollno",num);
+rs.updateString("Name",name);
+rs.updateString("Class",clas);
+rs.updateString("Section",String.valueOf(section));
+rs.insertRow();
+System.out.println("Row Inserted Successfully\n");
+
+System.out.println("Update the row");
+System.out.println("Enter the rollno you want to update");
+int roll=scanner.nextInt();
+while(rs.next())
+{
+if(rs.getInt("Rollno")==roll)
+{
+System.out.println("Enter the name you want to Update");
+String nn=scanner.next();
+rs.updateString("Name",nn);
+rs.updateRow();
+System.out.println("Row Updated Successfully\n");
+break;
+}
+}
+System.out.println("Cannot find rollno");
+
+System.out.println("Enter the row Number you want to delete");
+int nm=scanner.nextInt();
+if(rs.absolute(nm))
+{
+rs.deleteRow();
+System.out.println("Row deleted successfully");
+}
+else
+{
+System.out.println("Cannot delete the row");
+}
+
+con.close();
+}
+catch(ClassNotFoundException | SQLException e)
+{
+System.out.println(e);
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java database
+Insert the row
+Enter the Rollno
+344
+Enter the Name
+www
+Enter the class
+kk
+Enter the section
+a
+Row Inserted Successfully
+
+Update the row
+Enter the rollno you want to update
+344
+
+Enter the name you want to Update
+college
+Row Updated Successfully
+
+Enter the row Number you want to delete
+4
+Row deleted successfully
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

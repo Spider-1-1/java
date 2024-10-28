@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Shape2D
+{
+abstract void draw();
+abstract void resize();
+}
+class Circle extends Shape2D
+{
+void draw()
+{
+System.out.println("Draw a circle");
+}
+void resize()
+{
+System.out.println("Resize a circle");
+}
+}
+class Rectangle extends Shape2D
+{
+void draw()
+{
+System.out.println("Draw a Rectangle");
+}
+void resize()
+{
+System.out.println("Resize a Rectangle");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Shape2D s=new Circle();
+s.draw();
+s.resize();
+System.out.println();
+
+Shape2D s1=new Rectangle();
+s1.draw();
+s1.resize();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Draw a circle
+Resize a circle
+
+Draw a Rectangle
+Resize a Rectangle
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

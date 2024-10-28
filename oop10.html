@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Student {
+private String name;
+private String grade;
+private ArrayList< String> courses = new ArrayList<>();
+
+Student(String name, String grade, String initialCourse) {
+this.name = name;
+this.grade = grade;
+addCourse(initialCourse);
+}
+
+
+void addCourse(String course) {
+if (!courses.contains(course)) {
+courses.add(course);
+System.out.println("Course added: " + course);
+} else {
+System.out.println("Course already exists: " + course);
+}
+}
+
+void removeCourse(String course) {
+if (courses.remove(course)) {
+System.out.println("Course removed successfully: " + course);
+} else {
+System.out.println("Can't find the course: " + course);
+}
+}
+
+void displayCourses() {
+if (courses.isEmpty()) {
+System.out.println("No courses available.");
+} else {
+System.out.println("Courses for " + name + ":");
+for (String course : courses) {
+System.out.println(course);
+}
+}
+}
+
+public String toString() {
+return "Student[name=" + name + ", grade=" + grade + "]";
+}
+
+public static void main(String[] args) {
+Student student = new Student("John Doe", "A", "Math");
+student.addCourse("Science");
+student.addCourse("History");
+student.displayCourses();
+student.removeCourse("Science");
+student.displayCourses();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Student
+Course added: Math
+Course added: Science
+Course added: History
+Courses for John Doe:
+Math
+Science
+History
+Course removed successfully: Science
+Courses for John Doe:
+Math
+History
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

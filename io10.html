@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.*;
+class io
+{
+public static void main(String st[])
+{
+try
+{
+FileReader f= new FileReader("C:\\Users\\Mohd Jahid\\OneDrive\\Desktop\\new.txt");
+int i;
+int line=1;
+int word=1;
+int ch=0;
+while((i=f.read())!=-1)
+{
+System.out.print((char)i);
+if((char)i=='\n')
+{
+line++;
+}
+else if(((char)i==' ' || (char)i=='\r' || (char)i=='\f' ) && (char)i!='\n')
+{
+word++;
+}
+else if(((char)i>='a' && (char)i<='z') || ((char)i>='A' && (char)i<='Z'))
+{
+ch++;
+}
+}
+System.out.println("\n");
+System.out.println("Total number of lines are: "+line);
+System.out.println("Total number of words are: "+word);
+System.out.println("Total number of characters are: "+ch); 
+}
+catch(Exception e)
+{
+System.out.println("File does not exists");
+}
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java io
+hello, welcome to my you tube channel.
+hello world.
+welcome to chandigarh.
+
+Total number of lines are: 3
+Total number of words are: 12
+Total number of characters are: 59
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

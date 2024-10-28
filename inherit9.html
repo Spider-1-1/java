@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Vehicle
+{
+String make;
+String model;
+int year;
+String fuel_type;
+Double fuel_eff;
+Vehicle(String mak,String mod,int y,String fuel_y,double fuel_e)
+{
+make=mak;
+model=mod;
+year=y;
+fuel_type=fuel_y;
+fuel_eff=fuel_e;
+}
+String Model()
+{
+return model;
+}
+double Fuel_efficiancy()
+{
+return 0;
+}
+double Distance_travelled()
+{
+return 0;
+}
+double Max_speed()
+{
+return 0;
+
+}
+}
+class Truck extends Vehicle
+{
+double cargo;
+Truck(String mak,String mod,int y,String fuel_y,double fuel_e,double capacity)
+{
+super(mak,mod,y,fuel_y,fuel_e);
+cargo=capacity;
+}
+String Model()
+{
+return model;
+}
+double Fuel_efficiancy()
+{
+return fuel_eff*(1.0/(1.0+(cargo/1000.0)));
+}
+double Distance_travelled()
+{
+return Fuel_efficiancy()*fuel_eff;
+}
+double Max_speed()
+{
+return 80.0;
+}
+}
+class Car extends Vehicle
+{
+double seater;
+Car(String mak,String mod,int y,String fuel_y,double fuel_e,double seat)
+{
+super(mak,mod,y,fuel_y,fuel_e);
+seater=seat;
+}
+String Model()
+{
+return model;
+}
+double Fuel_efficiancy()
+{
+return fuel_eff*(1.0/(1.0+(seater/5.0)));
+}
+double Distance_travelled()
+{
+return Fuel_efficiancy()*fuel_eff;
+}
+double Max_speed()
+{
+return 180.0;
+}
+}
+class Motorcycle extends Vehicle
+{ 
+double engine;
+Motorcycle(String mak,String mod,int y,String fuel_y,double fuel_e,double rep)
+{
+super(mak,mod,y,fuel_y,fuel_e);
+engine=rep;
+}
+String Model()
+{
+return model;
+}
+double Fuel_efficiancy()
+{
+return fuel_eff*(1.0/(1.0+(engine/1000.0)));
+}
+double Distance_travelled()
+{
+return Fuel_efficiancy()*fuel_eff;
+}
+double Max_speed()
+{
+return 210.0;
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Truck t=new Truck("TATA","CT 600",2013,"Petrol",9.434,6.5);
+Car c=new Car("Mahindra","MH 21",2015,"Diesel",8.43,6);
+Motorcycle m=new Motorcycle("Honda","H1 43",2017,"Gasoline",6.343,7.5);
+
+System.out.println("Truck Model: "+t.Model());
+System.out.println("Fuel Efficiency: "+t.Fuel_efficiancy()+" mpg");
+System.out.println("Distance Travelled: "+t.Distance_travelled()+" miles");
+System.out.println("Maximum Speed: "+t.Max_speed()+" mph\n");
+
+System.out.println("Car Model: "+c.Model());
+System.out.println("Fuel Efficiency: "+c.Fuel_efficiancy()+" mpg");
+System.out.println("Distance Travelled: "+c.Distance_travelled()+" miles");
+System.out.println("Maximum Speed: "+c.Max_speed()+" mph\n");
+
+System.out.println("Motorcycle Model: "+m.Model());
+System.out.println("Fuel Efficiency: "+m.Fuel_efficiancy());
+System.out.println("Distance Travelled: "+m.Distance_travelled());
+System.out.println("Maximum Speed: "+m.Max_speed()+" mph\n");
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Truck Model: CT 600
+Fuel Efficiency: 9.373075012419275 mpg
+Distance Travelled: 88.42558966716344 miles
+Maximum Speed: 80.0 mph
+
+Car Model: MH 21
+Fuel Efficiency: 3.8318181818181816 mpg
+Distance Travelled: 32.30222727272727 miles
+Maximum Speed: 180.0 mph
+
+Motorcycle Model: H1 43
+Fuel Efficiency: 6.295781637717121
+Distance Travelled: 39.9341429280397
+Maximum Speed: 210.0 mph
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

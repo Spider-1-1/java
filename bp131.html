@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class lc
+{
+public static void main (String[] args) 
+{
+int n1 = 72, n2 = 120, gcd = 1;
+for(int i = 1; i <= n1 && i <= n2; ++i) {
+if(n1 % i == 0 && n2 % i == 0)
+gcd = i;
+}
+int lcm = (n1 * n2) / gcd;
+System.out.printf("The LCM of %d and %d is %d.", n1, n2, lcm);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java lc
+The LCM of 72 and 120 is 360.
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

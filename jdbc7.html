@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+
+import java.sql.*;
+import java.util.Scanner;
+
+class database
+{
+public static void main(String st[])
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql:
+//localhost:3306/student","root","Jahid@111");
+Statement str=con.createStatement(ResultSet.TYPE_SCROLL_
+INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+Scanner scanner=new Scanner(System.in);
+System.out.println("Enter the row number");
+int num=scanner.nextInt();
+ResultSet rs=str.executeQuery("select * from student;");
+System.out.println("Rollno\t"+"Name\t"+"Class\t"+"Section\t");
+if(rs.absolute(num))
+{
+System.out.println("\n"+rs.getInt("rollno")+"\t"+rs.getString("name"
+)+"\t"+rs.getString("class")+"\t"+rs.getString("section")+"  \t");
+}
+else
+{
+System.out.println("Row is not Exist");
+}
+con.close();
+}
+catch(ClassNotFoundException | SQLException e)
+{
+System.out.println(e);
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java database
+Enter the row number
+4
+Rollno  Name    Class   Section
+
+4263    jahid   BCA 4th a
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

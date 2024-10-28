@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Convert {
+public static void main(String st[]) {
+int i = 11;
+int k = 0;
+int base = 1;
+int n = i;
+while (n > 0) {
+int digit = n % 10;
+k += digit * base; 
+n = n / 10; 
+base = base * 2; 
+}
+System.out.print("The conversion of binary number " + i + " to decimal is: " + k);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Convert
+The conversion of binary number 11 to decimal is: 3
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

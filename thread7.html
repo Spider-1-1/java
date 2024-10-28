@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class BankAccount {
+private double balance;
+
+public BankAccount(double initialBalance) {
+this.balance = initialBalance;
+}
+
+// Synchronized method to safely deposit money
+public synchronized void deposit(double amount) {
+if (amount > 0) {
+balance += amount;
+System.out.printf("Deposited: %.2f | New Balance: %.2f\n",
+ amount, balance);
+}
+}
+
+public synchronized void withdraw(double amount) {
+if (amount > 0 && amount <= balance) {
+balance -= amount;
+System.out.printf("Withdrew: %.2f | New Balance: %.2f\n",
+ amount, balance);
+} else if (amount > balance) {
+System.out.printf("Withdrawal of %.2f failed |
+ Insufficient funds! Current Balance: %.2f\n", amount, balance);
+}
+}
+
+public double getBalance() {
+return balance;
+}
+}
+
+class DepositThread extends Thread {
+private BankAccount account;
+private double amount;
+
+public DepositThread(BankAccount account, double amount) {
+this.account = account;
+this.amount = amount;
+}
+
+@Override
+public void run() {
+account.deposit(amount);
+}
+}
+
+class WithdrawThread extends Thread {
+private BankAccount account;
+private double amount;
+
+public WithdrawThread(BankAccount account, double amount) {
+this.account = account;
+this.amount = amount;
+}
+
+@Override
+public void run() {
+account.withdraw(amount);
+}
+}
+
+class Main {
+public static void main(String[] args) {
+BankAccount account = new BankAccount(1000.00);
+
+Thread deposit1 = new DepositThread(account, 200.00);
+Thread withdraw1 = new WithdrawThread(account, 150.00);
+Thread deposit2 = new DepositThread(account, 300.00);
+Thread withdraw2 = new WithdrawThread(account, 500.00);
+Thread withdraw3 = new WithdrawThread(account, 1000.00); 
+
+
+deposit1.start();
+withdraw1.start();
+deposit2.start();
+withdraw2.start();
+withdraw3.start();
+
+try {
+deposit1.join();
+withdraw1.join();
+deposit2.join();
+withdraw2.join();
+withdraw3.join();
+} catch (InterruptedException e) {
+e.printStackTrace();
+}
+
+System.out.printf("Final Balance: %.2f\n", account.getBalance());
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Deposited: 200.00 | New Balance: 1200.00
+Withdrew: 1000.00 | New Balance: 200.00
+Withdrawal of 500.00 failed | Insufficient funds! Current Balance: 200.00
+Deposited: 300.00 | New Balance: 500.00
+Withdrew: 150.00 | New Balance: 350.00
+Final Balance: 350.00
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

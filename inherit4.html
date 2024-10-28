@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Employee
+{
+void work()
+{
+System.out.println("Working as an employee");
+}
+void getSalary(int salary)
+{
+System.out.println("Employee salary is: "+salary);
+}
+}
+class HRManager extends Employee
+{
+void work()
+{
+System.out.println("Working as an Manager");
+}
+void addemployee()
+{
+System.out.println("Adding new employees");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+HRManager h=new HRManager();
+h.getSalary(40000);
+h.work();
+h.addemployee();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Employee salary is: 40000
+Working as an Manager
+Adding new employees
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

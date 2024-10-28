@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Circle
+{
+private double radious;
+
+public void setterRadious(double r)
+{
+radious=r;
+}
+public double getterRadious()
+{
+return radious;
+}
+
+public double calculateArea()
+{
+return 3.14*radious*radious;
+}
+public double calculatePerimeter()
+{
+return 2*3.14*radious;
+}
+}
+
+class A 
+{
+public static void main(String st[])
+{
+Circle obj=new Circle();
+obj.setterRadious(5);
+System.out.println("Circle radious is: "+obj.getterRadious());
+System.out.println("Area of circle is: "+obj.calculateArea());
+System.out.println("Perimeter of circle is: "+obj.calculatePerimeter());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Circle radious is: 5.0
+Area of circle is: 78.5
+Perimeter of circle is: 31.400000000000002
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

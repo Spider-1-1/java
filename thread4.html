@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class A extends Thread
+{
+int[][] a1;
+int[][] a2;
+int[][] a3;
+A(int[][] a,int[][] b)
+{
+a1=a.clone();
+a2=b.clone();
+a3=new int[a.length][b.length];
+}
+public void run()
+{
+for(int i=0;i< a1.length;i++)
+{
+for(int j=0;j< a1.length;j++)
+{
+a3[i][j]=0;
+for(int k=0;k< a1.length;k++)
+{
+a3[i][j]+=a1[i][k]*a2[k][j];
+}
+}
+}
+}
+
+void show()
+{
+for(int i=0;i< a3.length;i++)
+{
+for(int j=0;j< a3.length;j++)
+{
+System.out.print(a3[i][j]+"\t");
+}
+System.out.println();
+}
+System.out.println();
+System.out.println();
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+int[][] a={
+{1,2,3},
+{4,5,6},
+{7,8,9}
+};
+int[][] b={
+{9,8,7},
+{6,5,4},
+{3,2,1}
+};
+A obj=new A(a,b);
+A obj2=new A(a,b);
+A obj3=new A(a,b);
+
+obj.start();
+obj2.start();
+obj3.start();
+
+obj.show();
+obj2.show();
+obj3.show();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+0       24      18
+84      69      54
+138     114     90
+
+
+30      24      18
+84      69      54
+138     114     90
+
+
+30      24      18
+84      69      54
+138     114     90
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

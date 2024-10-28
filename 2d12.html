@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>import java.util.Scanner;
+class matrix
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the matrix rows: ");
+int row=sc.nextInt();
+System.out.print("Enter the matrix columns: ");
+int col=sc.nextInt();
+int ar[][]=new int[row][col];
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+System.out.print("Enter the matrix at location ["+i+"]"+"["+j+"]: ");
+ar[i][j]=sc.nextInt();
+}
+}
+System.out.println("Original Matrix is: ");
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+System.out.print(ar[i][j]+"\t");
+}
+System.out.println();
+}
+int ar2[][]=new int[row][col];
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+ar2[i][j]=ar[j][i];
+}
+}
+System.out.println("Transpose Matrix is: ");
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+System.out.print(ar2[i][j]+"\t");
+}
+System.out.println();
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+            <pre>C:\Users\Mohd Jahid\Java Programs>java matrix
+                Enter the matrix rows: 3
+                Enter the matrix columns: 3
+                Enter the matrix at location [0][0]: 1
+                Enter the matrix at location [0][1]: 2
+                Enter the matrix at location [0][2]: 3
+                Enter the matrix at location [1][0]: 4
+                Enter the matrix at location [1][1]: 5
+                Enter the matrix at location [1][2]: 6
+                Enter the matrix at location [2][0]: 7
+                Enter the matrix at location [2][1]: 8
+                Enter the matrix at location [2][2]: 9
+                Original Matrix is:
+                1       2       3
+                4       5       6
+                7       8       9
+                Transpose Matrix is:
+                1       4       7
+                2       5       8
+                3       6       9</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.sql.*;
+class database
+{
+public static void main(String st[])
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql:
+//localhost:3306/student","root","Jahid@111");
+System.out.println("Connection is successfully established");
+con.close();
+}
+catch(ClassNotFoundException | SQLException e)
+{
+System.out.println("Cannot connect to mysql");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java database
+Connection is successfully established
+    
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

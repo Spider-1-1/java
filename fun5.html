@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class func
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the amount: ");
+long value=sc.nextLong();
+System.out.println("Enter the interest rate: ");
+float interest=sc.nextFloat();
+System.out.println("Enter the number of years: ");
+int year=sc.nextInt();
+func obj=new func();
+double total=obj.cal(value,interest,year);
+System.out.println("Total amounts are: "+total);
+}
+double cal(long value,float interest,int year)
+{
+double total;
+total=value*Math.pow(1+interest/100,year);
+return total;
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java func
+Enter the amount:
+1000
+Enter the interest rate:
+5
+Enter the number of years:
+3
+Total amounts are: 1157.624842286117
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

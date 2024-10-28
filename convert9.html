@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Scanner;
+import java.util.Date;
+class convert
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+try{
+System.out.println("Enter the String: ");
+String str=sc.nextLine();
+SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+Date date1 = dateFormat.parse(str);
+System.out.println("Convert String to Date is: "+str+"\t"+date1);
+}
+catch(Exception e)
+{
+System.out.println("Exception occured: "+e.getMessage());
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java convert
+Enter the String:
+2024-03-06
+Convert String to Date is: 2024-03-06  
+Wed Mar 06 00:00:00 IST 2024
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

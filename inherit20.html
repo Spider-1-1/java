@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Shape3D
+{
+abstract void calculateVolume();
+abstract void calculateSurfaceArea();
+}
+class Sphere extends Shape3D
+{
+int r;
+double total;
+Sphere(int radious)
+{
+r=radious;
+}
+void calculateVolume()
+{
+total=(4.0/3.0)*3.14*r*r*r;
+System.out.println("Volume of a Sphere is: "+total);
+}
+void calculateSurfaceArea()
+{
+total=4*3.14*r*r;
+System.out.println("Surface Area of a Sphere is: "+total);
+}
+}
+class Cube extends Shape3D
+{
+int s;
+double total;
+Cube(int side)
+{
+s=side;
+}
+void calculateVolume()
+{
+total=s*s*s;
+System.out.println("Volume of a Cube is:"+total);
+}
+void calculateSurfaceArea()
+{
+total=6*s*s;
+System.out.println("SurfaceArea of a Cube is: "+total);
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Shape3D s=new Sphere(5);
+s.calculateSurfaceArea();
+s.calculateVolume();
+System.out.println();
+
+Shape3D s1=new Sphere(4);
+s1.calculateSurfaceArea();
+s1.calculateVolume();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Surface Area of a Sphere is: 314.0
+Volume of a Sphere is: 523.3333333333334
+
+Surface Area of a Sphere is: 200.96
+Volume of a Sphere is: 267.94666666666666
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

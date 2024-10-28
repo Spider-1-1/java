@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class string
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the string: ");
+String str=sc.nextLine();
+System.out.println("Split a string into number of strings are: ");
+int count=1;
+for(int i=0;i<=str.length();i++)
+{
+for(int j=i+1;j<=str.length();j++)
+{
+String sub=str.substring(i, j);
+System.out.println("("+count+") \""+sub+"\"");
+count++;
+}
+}
+}
+}
+            
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Enter the string:
+hello
+Split a string into number of strings are:
+(1) "h"
+(2) "he"
+(3) "hel"
+(4) "hell"
+(5) "hello"
+(6) "e"
+(7) "el"
+(8) "ell"
+(9) "ello"
+(10) "l"
+(11) "ll"
+(12) "llo"
+(13) "l"
+(14) "lo"
+(15) "o"
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

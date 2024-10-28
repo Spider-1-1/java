@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Person
+{
+private String name;
+private int age;
+private String country;
+public void setterName(String n)
+{
+name=n;
+}
+public String getterName()
+{
+return name;
+}
+public void setterAge(int a)
+{
+age=a;
+}
+public int getterAge()
+{
+return age;
+}
+public void setterCountry(String c)
+{
+country=c;
+}
+public String getterCountry()
+{
+return country;
+}
+}
+
+class A
+{
+public static void main(String st[])
+{
+Person obj=new Person();
+obj.setterName("Jahid");
+obj.setterAge(20);
+obj.setterCountry("India");
+
+System.out.println("Name is: "+obj.getterName());
+System.out.println("Age is: "+obj.getterAge());
+System.out.println("Country is: "+obj.getterCountry());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Name is: Jahid
+Age is: 20
+Country is: India
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

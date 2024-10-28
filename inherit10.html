@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Employee
+{
+String name;
+String address;
+double salary;
+String job;
+Employee(String n,String a,double s,String j)
+{
+name=n;
+address=a;
+salary=s;
+job=j;
+}
+double Bonus()
+{
+return 0;
+}
+String Performance()
+{
+return "No performance report available";
+}
+String Project()
+{
+return "No projects";
+}
+
+}
+class Manager extends Employee
+{
+Manager(String n,String a,double s,String j)
+{
+super(n,a,s,j);
+}
+double Bonus()
+{
+return salary*0.15;
+}
+String Performance()
+{
+return name+" : Excellent";
+}
+String Project()
+{
+return name+" is managing a project";
+}
+
+}
+class Developer extends Employee
+{
+Developer(String n,String a,double s,String j)
+{
+super(n,a,s,j);
+}
+double Bonus()
+{
+return salary*0.10;
+}
+String Performance()
+{
+return name+" : Good";
+}
+String Project()
+{
+return name+" is writing code in "+job;
+}
+}
+class Programmer extends Employee
+{
+Programmer(String n,String a,double s,String j)
+{
+super(n,a,s,j);
+}
+double Bonus()
+{
+return salary*0.11;
+}
+String Performance()
+{
+return name+" : Excellent";
+}
+String Project()
+{
+return name+" is debug a code in "+job;
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Manager m=new Manager("Jahid","123 Abc",40000,"Manager");
+Developer d=new Developer("Harshit","234 Bcd",35000,"ASP.NET");
+Programmer p=new Programmer("Amandeep","345 Cde",30000,"PHP");
+
+System.out.println("Manager Bonus: "+m.Bonus());
+System.out.println("Performance Report For Manager "+m.Performance());
+System.out.println("Manager "+m.Project());
+System.out.println();
+
+System.out.println("Developer Bonus: "+d.Bonus());
+System.out.println("Performance Report For Developer "+d.Performance());
+System.out.println("Developer "+d.Project());
+System.out.println();
+
+System.out.println("Programmer Bonus: "+p.Bonus());
+System.out.println("Performance Report For Programmer "+p.Performance());
+System.out.println("Programmer "+p.Project());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Manager Bonus: 6000.0
+Performance Report For Manager Jahid : Excellent
+Manager Jahid is managing a project
+
+Developer Bonus: 3500.0
+Performance Report For Developer Harshit : Good
+Developer Harshit is writing code in ASP.NET
+
+Programmer Bonus: 3300.0
+Performance Report For Programmer Amandeep : Excellent
+Programmer Amandeep is debug a code in PHP
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

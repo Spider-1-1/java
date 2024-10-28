@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Shape
+{
+abstract double area();
+abstract double perimeter();
+}
+
+class Rectangle extends Shape
+{
+private float width;
+private float height;
+Rectangle(float w,float h)
+{
+width=w;
+height=h;
+}
+double area()
+{
+return width*height;
+}
+double perimeter()
+{
+return 2+(width+height);
+}
+
+}
+
+class Circle extends Shape
+{
+private float radious;
+Circle(float r)
+{
+radious=r;
+}
+double area()
+{
+return 3.14*radious*radious;
+}
+double perimeter()
+{
+return 2*3.14*radious;
+}
+}
+
+class Triangle extends Shape
+{
+private float side1;
+private float side2;
+private float side3;
+Triangle(float s1,float s2,float s3)
+{
+side1=s1;
+side2=s2;
+side3=s3;
+}
+double area()
+{
+return (side1+side2+side3)/2;
+}
+double perimeter()
+{
+return side1+side2+side3;
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Shape obj=new Rectangle(4,6);
+Shape obj2=new Circle(5);
+Shape obj3=new Triangle(4,5,6);
+
+System.out.println("Area of Rectangle is: "+obj.area());
+System.out.println("Perimeter of Rectangle is: "+obj.perimeter()+"\n");
+
+System.out.println("Area of Circle is: "+obj2.area());
+System.out.println("Perimeter of Circle is: "+obj2.perimeter()+"\n");
+
+System.out.println("Area of Triangle is: "+obj3.area());
+System.out.println("Perimeter of Triangle is: "+obj3.perimeter());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Area of Rectangle is: 24.0
+Perimeter of Rectangle is: 12.0
+
+Area of Circle is: 78.5
+Perimeter of Circle is: 31.400000000000002
+
+Area of Triangle is: 7.5
+Perimeter of Triangle is: 15.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

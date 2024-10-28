@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class TrafficLight
+{
+private String color;
+private int duration;
+TrafficLight(String c,int d)
+{
+color=c;
+duration=d;
+}
+String changeColor(String c,int d)
+{
+color=c;
+duration=d;
+return color;
+}
+boolean isRed()
+{
+return "red".equalsIgnoreCase(color);
+}
+boolean isGreen()
+{
+return "green".equalsIgnoreCase(color);
+}
+String getColor()
+{
+return color;
+}
+}
+class Main
+{
+public static void main(String st[])
+{
+TrafficLight obj=new TrafficLight("red",90);
+System.out.println("Current color is: "+obj.getColor());
+System.out.println("After the change the color: "+
+obj.changeColor("green", 30));
+
+System.out.println("Now Color is red: "+obj.isRed());
+System.out.println("Now Color is Green: "+obj.isGreen());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Current color is: red
+After the change the color: green
+Now Color is red: false
+Now Color is Green: true
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

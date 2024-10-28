@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class string
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter first the String: ");
+String str=sc.next();
+System.out.print("Enter the second string: ");
+String str2=sc.next();
+int z=Math.max(str.length(), str2.length());
+char s[]=str.toCharArray();
+char s2[]=str2.toCharArray();
+char ch;
+for(int i=0;i< s.length;i++)
+{
+for(int j=0;j< s.length;j++)
+{
+if(s[i]>s[j])
+{
+ch=s[i];
+s[i]=s[j];
+s[j]=ch;
+}
+}
+}
+for(int i=0;i< s2.length;i++)
+{
+for(int j=0;j< s2.length;j++)
+{
+if(s2[i]>s2[j])
+{
+ch=s2[i];
+s2[i]=s2[j];
+s2[j]=ch;
+}
+}
+}
+int flag=0;
+for(int i=0;i< z;i++)
+{
+if(s[i]!=s2[i])
+{
+flag=1;
+break;
+}
+}
+if(flag==1)
+{
+System.out.println("String are not Anagram");
+}
+else
+{
+System.out.println("String are Anagram");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Enter first the String: hello
+Enter the second string: hello
+String are Anagram
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

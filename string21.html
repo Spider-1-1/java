@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class string
+{
+public static void main(String st[])
+{
+permutation("abc");
+}
+public static void permutation(String str)
+{
+permutation(str,0,str.length()-1);
+}
+public static void permutation(String str,int l,int r)
+{
+if(l==r)
+{
+System.out.println(str);
+}
+else
+{
+for(int i=l;i<=r;i++)
+{
+str=swap(str,l,i);
+permutation(str,l+1,r);
+str=swap(str,l,i);
+}
+}
+}
+public static String swap(String a,int i,int j)
+{
+char temp;
+char[] arr=a.toCharArray();
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+return String.valueOf(arr);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+abc
+acb
+bac
+bca
+cba
+cab
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

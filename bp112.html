@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+
+class prime {
+public static void main(String st[]) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter the number: ");
+int a = sc.nextInt();
+int j = 0; 
+
+if (a <= 1) {
+j = 1; 
+} else {
+for (int i = 2; i < a; i++) {
+if (a % i == 0) {
+j = 1;
+break;
+}
+}
+}
+
+if (j == 0) {
+System.out.println("Number is prime");
+} else {
+System.out.println("Number is not prime");
+}
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java prime
+Enter the number: 30
+Number is not prime
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

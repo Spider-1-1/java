@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.FileReader;
+import java.util.Scanner;
+
+class B extends Exception
+{
+public String getMessage()
+{
+return " does not contains vowels";
+}
+}
+
+class A
+{
+public static void main(String st[]) 
+throws java.io.IOException
+{
+B obj=new B();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the string");
+String str=sc.next();
+boolean tr=false;
+for(int i=0;i&lt;str.length();i++)
+{
+char ch=str.charAt(i);
+if(ch=='a'|| ch=='e' || ch=='i' || ch=='o' || ch=='u')
+{
+tr=true;
+System.out.println("String Contains Vowels");
+break;
+}
+}
+try
+{
+if(!tr)
+{
+throw obj;
+}
+}
+catch(B b)
+{
+System.out.println(str+b.getMessage());
+}
+}
+}
+
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Enter the string
+hello
+String Contains Vowels
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

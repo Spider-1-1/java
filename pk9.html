@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+package c4.sample;
+
+public class A4
+{
+protected int a;
+protected int b;
+}
+
+
+class B4 extends c4.sample.A4
+{
+void display()
+{
+a=10;
+b=20;
+System.out.println("Protected member a is: "+a);
+System.out.println("Protected member b is: "+b);
+}
+public static void main(String st[])
+{
+B4 obj=new B4();
+obj.display();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>javac -d . A4.java
+
+C:\Users\Mohd Jahid\Java Programs>javac pk9.java
+
+C:\Users\Mohd Jahid\Java Programs>java B4
+Protected member a is: 10
+Protected member b is: 20
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

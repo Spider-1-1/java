@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class total
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the positive integer: ");
+int a=sc.nextInt();
+int n=a;
+int sum=0;
+if(a>0)
+{
+while(a>0)
+{
+int s=a%10;
+sum=sum+s;
+a=a/10;
+}
+System.out.println("The Sum of positive integer is: "+sum);
+}
+else
+{
+System.out.println("The Number is negative");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java total
+Enter the positive integer: 24
+The Sum of positive integer is: 6
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

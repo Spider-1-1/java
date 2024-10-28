@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+package p10;
+
+public class A10
+{
+public int a;
+public int b;
+}
+
+
+
+import p10.A10;
+
+class B10
+{
+void display()
+{
+A10 obj2=new A10();
+obj2.a=10;
+obj2.b=20;
+System.out.println("Public member a is: "+obj2.a);
+System.out.println("Public member b is: "+obj2.b);
+}
+public static void main(String st[])
+{
+B10 obj=new B10();
+obj.display();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>javac -d . A10.java
+
+C:\Users\Mohd Jahid\Java Programs>javac pk10.java
+
+C:\Users\Mohd Jahid\Java Programs>java B10
+Public member a is: 10
+Public member b is: 20
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

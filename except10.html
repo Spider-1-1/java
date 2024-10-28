@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.sql.*;
+
+class A
+{
+public static void main(String st[]) throws 
+java.lang.ClassNotFoundException
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection c1=DriverManager.getConnection("jdbc:mysql://
+localhost:3306/student","root","Jahid@111");
+Statement stm=c1.createStatement();
+int a=stm.executeUpdate("insert into student values(4247,'aman',
+'BCA 4th','a')");
+if(a>0)
+{
+System.out.println("Record is inserted Successfully");
+}
+int b=stm.executeUpdate("update student set rollno=4345 
+where name='gg'");
+if(b>0)
+{
+System.out.println("Update the record");
+}
+int c=stm.executeUpdate("delete from student where rollno=4208");
+if(c>0)
+{
+System.out.println("Delete the record");
+}
+c1.close();
+}
+catch(java.sql.SQLException e)
+{
+System.out.println(e.getMessage());
+}
+}
+}
+
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Duplicate entry '4247' for key 'student.PRIMARY'
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+
+class A extends Frame implements ItemListener
+{
+Checkbox c1,c2;
+Label label;
+A()
+{
+CheckboxGroup grp=new CheckboxGroup();
+
+c1=new Checkbox("10th",grp,true);
+c2=new Checkbox("12th",grp,false);
+
+label=new Label();
+label.setBounds(200,200,200,40);
+
+setLayout(null);
+
+c1.setBounds(30,30,100,30);
+c2.setBounds(30,60,100,30);
+
+add(c1);
+add(c2);
+add(label);
+
+c1.addItemListener(this);
+c2.addItemListener(this);
+
+setSize(500,500);
+setVisible(true);
+}
+
+public void itemStateChanged(ItemEvent e)
+{
+if(e.getSource()==c1)
+{
+label.setText("Selected box is: "+c1.getLabel());
+}
+else
+{
+label.setText("Selected box is: "+c2.getLabel());
+}
+}
+}
+
+class B
+{
+public static void main(String st[])
+{
+new A();
+}
+}
+
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+ <img src="delegations\Screenshot 2024-10-19 105907.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

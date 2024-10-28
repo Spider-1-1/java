@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+
+class A extends Frame implements MouseListener
+{
+Button b1;
+A()
+{
+b1=new Button("Click");
+b1.setBounds(100,100,80,30);
+add(b1);
+b1.addMouseListener(this);
+setLayout(null);
+setSize(500,500);
+setVisible(true);
+}
+
+@Override
+public void mouseClicked(MouseEvent me) {
+System.out.println("Mouse Clicked");
+}
+
+@Override
+public void mousePressed(MouseEvent me) {
+System.out.println("Mouse Pressed");
+}
+
+@Override
+public void mouseReleased(MouseEvent me) {
+System.out.println("Mouse Released");
+}
+
+@Override
+public void mouseEntered(MouseEvent me) {
+System.out.println("Mouse Entered");
+}
+
+@Override
+public void mouseExited(MouseEvent me) {
+System.out.println("Mouse Exited");
+
+}
+
+}
+
+class B
+{
+public static void main(String st[])
+{
+new A();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+ <img src="delegations\Screenshot 2024-10-19 110013.png" alt="applet1" height="350" width="500">
+
+
+
+C:\Users\Mohd Jahid\Java Programs>java B
+Mouse Entered
+Mouse Exited
+Mouse Entered
+Mouse Pressed
+Mouse Released
+Mouse Clicked
+Mouse Exited
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

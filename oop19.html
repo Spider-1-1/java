@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Flight {
+private String flightNumber;
+private String destination;
+private double price;
+private boolean available;
+
+public Flight(String flightNumber, String destination, double price) {
+this.flightNumber = flightNumber;
+this.destination = destination;
+this.price = price;
+this.available = true;
+}
+
+public String getFlightNumber() {
+return flightNumber;
+}
+
+public String getDestination() {
+return destination;
+}
+
+public double getPrice() {
+return price;
+}
+
+public boolean isAvailable() {
+return available;
+}
+
+public void book() {
+if (available) {
+available = false;
+}
+}
+
+public void cancel() {
+if (!available) {
+available = true;
+}
+}
+
+public String toString() {
+return "Flight{" +
+"flightNumber='" + flightNumber + '\'' +
+", destination='" + destination + '\'' +
+", price=" + price +
+", available=" + available +
+'}';
+}
+}
+
+class Hotel {
+private String hotelName;
+private String location;
+private double price;
+private boolean available;
+
+public Hotel(String hotelName, String location, double price) {
+this.hotelName = hotelName;
+this.location = location;
+this.price = price;
+this.available = true;
+}
+
+public String getHotelName() {
+return hotelName;
+}
+
+public String getLocation() {
+return location;
+}
+
+public double getPricePerNight() {
+return price;
+}
+
+public boolean isAvailable() {
+return available;
+}
+
+public void book() {
+if (available) {
+available = false;
+}
+}
+
+public void cancel() {
+if (!available) {
+available = true;
+}
+}
+
+@Override
+public String toString() {
+return "Hotel{" +
+"hotelName='" + hotelName + '\'' +
+", location='" + location + '\'' +
+", pricePerNight=" + price +
+", available=" + available +
+'}';
+}
+}
+
+class TravelAgency {
+private List< Flight> flights;
+private List< Hotel> hotels;
+
+public TravelAgency() {
+this.flights = new ArrayList<>();
+this.hotels = new ArrayList<>();
+}
+
+public void addFlight(Flight flight) {
+flights.add(flight);
+}
+
+public void addHotel(Hotel hotel) {
+hotels.add(hotel);
+}
+
+public List< Flight> searchFlights(String destination) {
+List< Flight> result = new ArrayList<>();
+for (Flight flight : flights) {
+if (flight.getDestination().equalsIgnoreCase(destination) && flight.isAvailable()) {
+result.add(flight);
+}
+}
+return result;
+}
+
+public List< Hotel> searchHotels(String location) {
+List< Hotel> result = new ArrayList<>();
+for (Hotel hotel : hotels) {
+if (hotel.getLocation().equalsIgnoreCase(location) && hotel.isAvailable()) {
+result.add(hotel);
+}
+}
+return result;
+}
+
+public boolean bookFlight(String flightNumber) {
+for (Flight flight : flights) {
+if (flight.getFlightNumber().equalsIgnoreCase(flightNumber) && flight.isAvailable()) {
+flight.book();
+return true;
+}
+}
+return false;
+}
+
+public boolean cancelFlight(String flightNumber) {
+for (Flight flight : flights) {
+if (flight.getFlightNumber().equalsIgnoreCase(flightNumber) && !flight.isAvailable()) {
+flight.cancel();
+return true;
+}
+}
+return false;
+}
+
+public boolean bookHotel(String hotelName) {
+for (Hotel hotel : hotels) {
+if (hotel.getHotelName().equalsIgnoreCase(hotelName) && hotel.isAvailable()) {
+hotel.book();
+return true;
+}
+}
+return false;
+}
+
+public boolean cancelHotel(String hotelName) {
+for (Hotel hotel : hotels) {
+if (hotel.getHotelName().equalsIgnoreCase(hotelName) && !hotel.isAvailable()) {
+hotel.cancel();
+return true;
+}
+}
+return false;
+}
+
+public static void main(String st[]) {
+
+TravelAgency agency = new TravelAgency();
+
+agency.addFlight(new Flight("AA123", "New York", 300.00));
+agency.addFlight(new Flight("BA456", "Los Angeles", 250.00));
+
+agency.addHotel(new Hotel("Hilton", "New York", 150.00));
+agency.addHotel(new Hotel("Marriott", "Los Angeles", 120.00));
+
+System.out.println("Searching flights to New York:");
+List< Flight> flightsToNY = agency.searchFlights("New York");
+for (Flight flight : flightsToNY) {
+System.out.println(flight);
+}
+
+System.out.println("\nBooking flight AA123:");
+boolean bookedFlight = agency.bookFlight("AA123");
+System.out.println("Flight booked: " + bookedFlight);
+
+
+System.out.println("\nSearching hotels in Los Angeles:");
+List< Hotel> hotelsInLA = agency.searchHotels("Los Angeles");
+for (Hotel hotel : hotelsInLA) {
+System.out.println(hotel);
+}
+
+System.out.println("\nBooking Marriott hotel:");
+boolean bookedHotel = agency.bookHotel("Marriott");
+System.out.println("Hotel booked: " + bookedHotel);
+
+System.out.println("\nCanceling flight AA123:");
+boolean canceledFlight = agency.cancelFlight("AA123");
+System.out.println("Flight canceled: " + canceledFlight);
+
+System.out.println("\nCanceling Marriott hotel:");
+boolean canceledHotel = agency.cancelHotel("Marriott");
+System.out.println("Hotel canceled: " + canceledHotel);
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java TravelAgency
+Searching flights to New York:
+Flight{flightNumber='AA123', destination='New York', price=300.0, available=true}
+
+Booking flight AA123:
+Flight booked: true
+
+Searching hotels in Los Angeles:
+Hotel{hotelName='Marriott', location='Los Angeles', pricePerNight=120.0, available=true}
+
+Booking Marriott hotel:
+Hotel booked: true
+
+Canceling flight AA123:
+Flight canceled: true
+
+Canceling Marriott hotel:
+Hotel canceled: true
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

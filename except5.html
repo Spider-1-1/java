@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.FileReader;
+
+class B extends Exception
+{
+public String getMessage()
+{
+return "File is empty";
+}
+}
+
+class A
+{
+public static void main(String st[]) throws 
+java.io.FileNotFoundException, java.io.IOException
+{
+B obj=new B();
+int i=0;
+try
+{
+FileReader f=new FileReader("C:\\Users\\Mohd Jahid
+\\OneDrive\\Desktop\\file.txt");
+if((i=f.read())==-1)
+{
+throw obj;
+}
+else
+{
+System.out.println("File is not Empty");
+}
+}
+catch(B b)
+{
+System.out.println(b.getMessage());
+}
+}
+}
+    
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+File is not Empty
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

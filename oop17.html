@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Movie
+{
+private String title;
+private String director;
+private String actor;
+ArrayList< String> reviews=new ArrayList<>();
+Movie(String t,String d,String a,String r)
+{
+title=t;
+director=d;
+actor=a;
+reviews.add(r);
+}
+void addReview(String s)
+{
+reviews.add(s);
+System.out.println("Review "+s+" is added");
+}
+void retreive()
+{
+for(String s: reviews)
+{
+System.out.println(s);
+}
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Movie obj=new Movie("Title","Director","Actor","Wonderful Movie");
+obj.addReview("Great Movie");
+obj.addReview("The best Movie in the world");
+
+obj.retreive();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Review Great Movie is added
+Review The best Movie in the world is added
+Wonderful Movie
+Great Movie
+The best Movie in the world
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

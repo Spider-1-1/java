@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+class A extends Frame implements ActionListener {
+Image img;
+
+A() {
+Button button = new Button("Click Me");
+
+setLayout(null);
+button.setBounds(50, 50, 100, 30);
+add(button);
+button.addActionListener(this);
+
+setSize(500, 500);
+setVisible(true);
+}
+
+public void actionPerformed(ActionEvent e) {
+img = Toolkit.getDefaultToolkit().getImage("C:\\Users
+\\Mohd Jahid\\OneDrive\\Pictures\\New folder\\favicon.ico.jpg");
+repaint(); 
+}
+
+public void paint(Graphics g) {
+if (img != null) {
+g.drawImage(img, 50, 100,200,200, this); 
+}
+}
+}
+
+class B
+{
+public static void main(String st[])
+{
+new A();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+ <img src="delegations\Screenshot 2024-10-19 105845.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

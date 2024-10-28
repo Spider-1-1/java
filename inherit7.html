@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Person
+{
+String first;
+String last;
+void getFirstName(String f)
+{
+first=f;
+System.out.print(first);
+}
+void getLastName(String l)
+{
+this.last=l;
+System.out.print(last);
+}
+}
+class Employee extends Person
+{
+int id;
+String job;
+void getEmployeeId(int i,String j)
+{
+id=i;
+job=j;
+System.out.print(job);
+System.out.print(" ("+id+")");
+
+}
+void getLastName(String l)
+{
+System.out.print(l);
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Employee e=new Employee();
+e.getFirstName("Mohd ");
+e.getLastName("Jahid, ");
+e.getEmployeeId(1222,"Senior Manager");
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Mohd Jahid, Senior Manager (1222)
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

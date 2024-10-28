@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+interface Flyable
+{
+void fly_obj();
+}
+class Spacecraft implements Flyable
+{
+public void fly_obj()
+{
+System.out.println("Spacecraft is flying");
+}
+}
+class Airplane implements Flyable
+{
+public void fly_obj()
+{
+System.out.println("Airplane is flying");
+}
+}
+class Helicopter implements Flyable
+{
+public void fly_obj()
+{
+System.out.println("Helicopter is flying");
+}
+}
+class interfaces
+{
+public static void main(String st[])
+{
+Spacecraft s=new Spacecraft();
+s.fly_obj();
+System.out.println();
+
+Airplane a=new Airplane();
+a.fly_obj();
+System.out.println();
+
+Helicopter h=new Helicopter();
+h.fly_obj();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java interfaces
+Spacecraft is flying
+
+Airplane is flying
+
+Helicopter is flying
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

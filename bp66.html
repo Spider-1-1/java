@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class check
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the first number: ");
+int a=sc.nextInt();
+System.out.print("Enter the second number: ");
+int b=sc.nextInt();
+System.out.print("Enter the third number: ");
+int c=sc.nextInt();
+if(a< b && b< c)
+{
+System.out.println("Numbers are increasing order");
+}
+else if(a>b && b>c)
+{
+System.out.println("Numbers are decreasing order");
+}
+else
+{
+System.out.println("Neither increasing or decreasing order");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java check
+Enter the first number: 234
+Enter the second number: 65
+Enter the third number: 34
+Numbers are decreasing order
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

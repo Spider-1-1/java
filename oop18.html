@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Restaurant
+{
+ArrayList< String> menu_item=new ArrayList<>();
+private int price;
+ArrayList< Double> ratings=new ArrayList<>();
+Restaurant(String item,int p,double rating)
+{
+menu_item.add(item);
+price=p;
+ratings.add(rating);
+}
+void addItem(String item,double rating)
+{
+if(menu_item.equals(item))
+{
+System.out.println("Item is already exists");
+}
+else
+{
+menu_item.add(item);
+ratings.add(rating);
+System.out.println("Item "+item+" is added successfully");
+}
+}
+void removeItem(String item,double rating)
+{
+if(menu_item.isEmpty())
+{
+System.out.println("No item exists");
+}
+else
+{
+menu_item.remove(item);
+ratings.remove(rating);
+System.out.println("Item "+item+" is removed");
+}
+}
+double averageRating()
+{
+double total=0.0;
+for(Double rating: ratings)
+{
+total=total+rating;
+}
+return total/ratings.size();
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Restaurant obj=new Restaurant("Chilli Potato",340,6.5);
+obj.addItem("Frence Fries", 8.5);
+obj.addItem("Burger", 9.6);
+
+obj.removeItem("Frence Fries", 8.5);
+
+System.out.println("Average Rating is: "+obj.averageRating());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Item Frence Fries is added successfully
+Item Burger is added successfully
+Item Frence Fries is removed
+Average Rating is: 8.05
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class find
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the number: ");
+int month=sc.nextInt();
+System.out.print("Enter the year: ");
+int year=sc.nextInt();
+switch(month)
+{
+case 1:
+System.out.println("The name of the month is January and number of days is 31");
+break;
+case 2:
+if((year%400==0) || (year%4==0) && (year%100!=0))
+{
+System.out.println("The name of the month is February and number of days is 28");
+}
+else
+{
+System.out.println("The name of the month is February and number of days is 29");
+}
+break;
+case 3:
+System.out.println("The name of the month is March and number of days is 31");
+break;
+case 4:
+System.out.println("The name of the month is April and number of days is 30");
+break;
+case 5:
+System.out.println("The name of the month is May and number of days is 31");
+break;
+case 6:
+System.out.println("The name of the month is June and number of days is 30");
+break;
+case 7:
+System.out.println("The name of the month is July and number of days is 31");
+break;
+case 8:
+System.out.println("The name of the month is August and number of days is 31");
+break;
+case 9:
+System.out.println("The name of the month is September and number of days is 30");
+break;
+case 10:
+System.out.println("The name of the month is October and number of days is 31");
+break;
+case 11:
+System.out.println("The name of the month is November and number of days is 30");
+break;
+case 12:
+System.out.println("The name of the month is December and number of days is 31");
+break;
+default:
+System.out.println("Enter the right number");      
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java find
+Enter the number: 4
+Enter the year: 7
+The name of the month is April and number of days is 30
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

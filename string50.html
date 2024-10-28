@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class string
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the string: ");
+String str=sc.nextLine();
+StringBuffer buf=new StringBuffer(str);
+buf.insert(2, "llo");
+System.out.println("Insert String is: "+buf);
+buf.append(" world");
+System.out.println("Append String is: "+buf);
+buf.replace(1, 5, "appy");
+System.out.println("Replace String is: "+buf);
+buf.delete(5, buf.length());
+System.out.println("After deleting the string: "+buf);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Enter the string:
+hello
+Insert String is: hellollo
+Append String is: hellollo world
+Replace String is: happyllo world
+After deleting the string: happy
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

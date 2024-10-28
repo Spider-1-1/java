@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Instrument
+{
+abstract void play();
+abstract void tune();
+}
+class Glockenspiel extends Instrument
+{
+void play()
+{
+System.out.println("Glockenspiel: Playing the notes on the metal bars");
+}
+void tune()
+{
+System.out.println("Glockspiel: Tuning the metal bars to the correct pitch");
+}
+}
+class Violin extends Instrument
+{
+void play()
+{
+System.out.println("Violin: Playing the strings with a fingers");
+}
+void tune()
+{
+System.out.println("Violin: Tuning the Strings to the correct pitch");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Instrument i=new Glockenspiel();
+i.play();
+i.tune();
+System.out.println();
+
+Instrument i1=new Violin();
+i1.play();
+i1.tune();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Glockenspiel: Playing the notes on the metal bars
+Glockspiel: Tuning the metal bars to the correct pitch
+
+Violin: Playing the strings with a fingers
+Violin: Tuning the Strings to the correct pitch
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

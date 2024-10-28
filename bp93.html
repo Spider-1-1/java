@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class array
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the array size: ");
+int a=sc.nextInt();
+int ar[]=new int[a];
+for(int i=0;i< ar.length;i++)
+{
+System.out.print("Enter the array at ["+i+"] location: ");
+ar[i]=sc.nextInt();
+}
+int temp;
+for(int i=0;i< ar.length;i++)
+{
+for(int j=i+1;j< ar.length;j++)
+{
+if(ar[i]>ar[j])
+{
+temp=ar[i];
+ar[i]=ar[j];
+ar[j]=temp;
+}
+}
+}
+int size=a;
+for(int i=0;i< size;i++)
+{
+for(int j=i+1;j< size;j++)
+{
+if(ar[i]==ar[j])
+{
+for(int k=j;k< size-1;k++)
+{
+ar[k]=ar[k+1];
+}
+j--;
+size--;
+}
+
+}
+}
+if(size>=2)
+{
+System.out.println("Second largest array is: "+ar[size-2]);
+}
+else
+{
+System.out.println("No Second array");
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java array
+Enter the array size: 5
+Enter the array at [0] location: 1
+Enter the array at [1] location: 2
+Enter the array at [2] location: 3
+Enter the array at [3] location: 4
+Enter the array at [4] location: 5
+Second largest array is: 4
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

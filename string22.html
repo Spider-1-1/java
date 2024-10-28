@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class string
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the string: ");
+String str=sc.nextLine();
+char str2[]=str.toCharArray();
+int in[]=new int[128];
+for(char ch:str2)
+{
+in[ch]++;
+}
+char max=' ';
+int maxcount=Integer.MIN_VALUE;
+char min=' ';
+int mincount=Integer.MAX_VALUE;
+for(int i=0;i< 128;i++)
+{
+if(in[i]>0)
+{
+char current= (char) i;
+int count=in[i];
+
+if(count>maxcount)
+{
+maxcount=count;
+max=current;
+}
+if(count< mincount)
+{
+mincount=count;
+min=current;
+}
+}
+}
+System.out.println("Maximum occuring character is: "+max);
+System.out.println("Minimum occuring character is: "+min);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Enter the string:
+hello
+Maximum occuring character is: l
+Minimum occuring character is: e
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

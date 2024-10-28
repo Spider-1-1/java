@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class BankAccount
+{
+abstract void deposit(int r);
+abstract void withdraw(int r);
+}
+class SavingsAccount extends BankAccount
+{
+String acc;
+int amount;
+SavingsAccount(String account,int amt)
+{
+acc=account;
+amount=amt;
+}
+void deposit(int amt)
+{
+amount=amount+amt;
+System.out.println("Total amount of account number "+acc+" in savings account is: "+amount+" rps.");
+}
+void withdraw(int amt)
+{
+if(amount>amt)
+{
+amount-=amt;
+System.out.println("After withdraw the money of account number "+acc+" in savings account is: "+amount+" rps.");
+}
+else
+{
+System.out.println("Insufficient Balance");
+}
+}
+}
+class CurrentAccount extends BankAccount
+{
+String acc;
+int amount;
+CurrentAccount(String account,int amt)
+{
+acc=account;
+amount=amt;
+}
+void deposit(int amt)
+{
+amount=amount+amt;
+System.out.println("Total amount of account number "+acc+" in savings account is: "+amount+" rps.");
+}
+void withdraw(int amt)
+{
+if(amount>amt)
+{
+amount-=amt;
+System.out.println("After withdraw the money of account number "+acc+" in savings account is: "+amount+" rps.");
+}
+else
+{
+System.out.println("Insufficient Balance");
+}
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+BankAccount b=new SavingsAccount("2442BOB",5000);
+b.deposit(6000);
+b.withdraw(8000);
+System.out.println();
+BankAccount b1=new CurrentAccount("6446SBI",6000);
+b1.deposit(9330);
+b1.withdraw(5433);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Total amount of account number 2442BOB in savings account is: 11000 rps.
+After withdraw the money of account number 2442BOB in 
+savings account is: 3000 rps.
+
+Total amount of account number 6446SBI in savings account is: 15330 rps.
+After withdraw the money of account number 6446SBI in 
+savings account is: 9897 rps.
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

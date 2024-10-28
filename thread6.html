@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+class WebCrawlerThread extends Thread {
+private String url;
+
+public WebCrawlerThread(String url) {
+this.url = url;
+}
+
+@Override
+public void run() {
+crawl(url);
+}
+
+private void crawl(String url) {
+try {
+HttpURLConnection connection = (HttpURLConnection) 
+new URL(url).openConnection();
+connection.setRequestMethod("GET");
+
+int responseCode = connection.getResponseCode();
+if (responseCode == HttpURLConnection.HTTP_OK) {
+BufferedReader in = new BufferedReader(
+    new InputStreamReader(connection.getInputStream()));
+String inputLine;
+StringBuilder content = new StringBuilder();
+
+while ((inputLine = in.readLine()) != null) {
+content.append(inputLine).append("\n");
+}
+
+
+System.out.println("Content from " + url + ":\n" +
+ content.toString().substring(0, Math.min(500, content.length())) + "\n");
+
+in.close();
+} else {
+System.out.println("Failed to fetch content from "
+ + url + ". Response code: " + responseCode);
+}
+} catch (Exception e) {
+System.out.println("Error crawling " + url + ": " + e.getMessage());
+}
+}
+}
+
+class Main {
+public static void main(String[] args) {
+String[] urls = {
+"http://example.com",
+"http://www.google.com",
+"http://www.bbc.com",
+"http://www.wikipedia.org"
+};
+
+for (String url : urls) {
+WebCrawlerThread thread = new WebCrawlerThread(url);
+thread.start();
+}
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Error crawling http://example.com: example.com
+Error crawling http://www.wikipedia.org: www.wikipedia.org
+Error crawling http://www.google.com: www.google.com
+Error crawling http://www.bbc.com: www.bbc.com
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

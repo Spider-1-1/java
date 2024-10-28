@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+
+class array
+{
+public static void main(String st[])
+{
+int ar[]={0,1,0,0,1,1,1,0,1,1};
+int temp;
+for(int i=0;i< ar.length;i++)
+{
+for(int j=i+1;j< ar.length;j++)
+{
+if(ar[i]>ar[j])
+{
+temp=ar[i];
+ar[i]=ar[j];
+ar[j]=temp;
+}
+}
+}
+System.out.println("After the segregation: ");
+for(int i=0;i< ar.length;i++)
+{
+System.out.print(ar[i]+"\t");
+}
+
+}
+}
+
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java array
+After the segregation:
+0       0       0       0       1       1       1     
+1       1       1
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

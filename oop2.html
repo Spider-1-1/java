@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Dog
+{
+private String name;
+private String breed;
+Dog()
+{
+
+}
+Dog(String n,String b)
+{
+name=n;
+breed=b;
+}
+String getName()
+{
+return name;
+}
+String getBreed()
+{
+return breed;
+}
+void setName(String n)
+{
+name=n;
+}
+void setBreed(String b)
+{
+breed=b;
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Dog obj=new Dog("Tiger","Pit Bull");
+System.out.println("Dog Name is: "+obj.getName());
+System.out.println("Dog Breed is: "+obj.getBreed());
+Dog obj2=new Dog();
+obj2.setName("Tyson");
+obj2.setBreed("Jerman Sheffered");
+System.out.println();
+System.out.println("After Modify the attributes:");
+System.out.println("Dog Name is: "+obj2.getName());
+System.out.println("Dog Breed is: "+obj2.getBreed());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Dog Name is: Tiger
+Dog Breed is: Pit Bull
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

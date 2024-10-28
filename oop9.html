@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Employee
+{
+private String name;
+private double salary;
+private int year;
+private int month;
+private int day;
+Employee(String n,double s,int y,int m,int d)
+{
+name=n;
+salary=s;
+year=y;
+month=m;
+day=d;
+}
+int calculateyear(int y,int m,int d)
+{
+int years=y-year;
+if(m< month||(m==month && d< day))
+{
+years--;
+}
+return years;
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Employee obj=new Employee("abc",5000,2004,04,03);
+System.out.println("Calculate the years of service
+ of a emplyee is: "+obj.calculateyear(2024,04,10));
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Calculate the years of service of a emplyee is: 20
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.io.*;
+class string
+{
+public static void main(String st[]) throws IOException
+{
+FileReader f=new FileReader("C:\\Users\\Mohd Jahid\\OneDrive\\Desktop\\new.txt");
+BufferedReader br=new BufferedReader(f);
+StringBuilder builder=new StringBuilder();
+String str;
+while((str=br.readLine())!=null)
+{
+builder.append(str).append(" ");
+}
+String str2=builder.toString();
+String str3[]=str2.split("\\W+");
+String max=null;
+int count=1;
+int maximum=0;
+String current;
+for(int i=0;i< str3.length;i++)
+{
+current=str3[i];
+
+for(int j=i+1;j< str3.length;j++)
+{
+if(current.equalsIgnoreCase(str3[j]))
+{
+count++;
+}
+}
+if(count>maximum)
+{
+maximum=count;
+max=current;
+}
+}
+System.out.println("Most repeated word in a text file is: "+max);
+
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Most repeated word in a text file is: to
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class func
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the first character: ");
+char ch=sc.next().charAt(0);
+System.out.print("Enter the second character: ");
+char ch2=sc.next().charAt(0);
+func obj=new func();
+obj.two(ch,ch2);
+}
+void two(char ch,char ch1)
+{
+if(ch>=ch1)
+{
+System.out.println("Enter the right characters");
+}
+else if(ch>='a' && ch1<='Z')
+{
+System.out.println("Enter the right characters");
+}
+else if(ch>='a' && ch1<='z')
+{
+for(int i=ch+1;i< ch1;i++)
+{
+System.out.print((char) i+"\t");
+}
+}
+else if(ch>='A' && ch1<='Z')
+{
+for(int i=ch+1;i< ch1;i++)
+{
+System.out.print((char) i+"\t");
+}
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java func
+Enter the first character: j
+Enter the second character: m
+k       l
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

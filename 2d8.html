@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>import java.util.Scanner;
+class matrix
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the matrix rows: ");
+int row=sc.nextInt();
+System.out.print("Enter the matrix columns: ");
+int col=sc.nextInt();
+int ar[][]=new int[row][col];
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+System.out.print("Enter the matrix at location ["+i+"]"+"["+j+"]: ");
+ar[i][j]=sc.nextInt();
+}
+}
+int count=0;
+int count2=0;
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+if(ar[i][j]%2==0)
+{
+count++;
+}
+else
+{
+count2++;
+}
+}
+}
+System.out.println("Frequency of Even numbers are: "+count);
+System.out.println("Frequency of Odd numbers are: "+count2);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>C:\Users\Mohd Jahid\Java Programs>java matrix
+Enter the matrix rows: 3
+Enter the matrix columns: 3
+Enter the matrix at location [0][0]: 1
+Enter the matrix at location [0][1]: 2
+Enter the matrix at location [0][2]: 3
+Enter the matrix at location [1][0]: 4
+Enter the matrix at location [1][1]: 5
+Enter the matrix at location [1][2]: 6
+Enter the matrix at location [2][0]: 7
+Enter the matrix at location [2][1]: 8
+Enter the matrix at location [2][2]: 9
+Frequency of Even numbers are: 4
+Frequency of Odd numbers are: 5</pre>
+        </div>
+    </div>
+
+</body>
+</html>

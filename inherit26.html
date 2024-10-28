@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class GeometricShape
+{
+abstract void area();
+abstract void perimeter();
+}
+class Triangle extends GeometricShape
+{
+int s1;
+int s2;
+int s3;
+int b;
+int h;
+double total;
+Triangle(int side1,int side2,int side3,int base,int height)
+{
+s1=side1;
+s2=side2;
+s3=side3;
+b=base;
+h=height;
+}
+void area()
+{
+total=0.5*b*h;
+System.out.println("Area of Triangle is: "+total);
+}
+void perimeter()
+{
+total=s1+s2+s3;
+System.out.println("Perimeter of Triangle is: "+total);
+}
+}
+class Square extends GeometricShape
+{
+double s;
+double total;
+Square(double side)
+{
+s=side;
+}
+void area()
+{
+total=s*s;
+System.out.println("Area of Square is: "+total);
+}
+void perimeter()
+{
+total=4*s;
+System.out.println("Perimeter of Square is: "+total);
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+GeometricShape g=new Triangle(2,3,4,5,6);
+g.area();
+g.perimeter();
+System.out.println();
+
+GeometricShape g1=new Square(4);
+g1.area();
+g1.perimeter();
+}
+}
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Area of Triangle is: 15.0
+Perimeter of Triangle is: 9.0
+
+Area of Square is: 16.0
+Perimeter of Square is: 16.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

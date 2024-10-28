@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Bird
+{
+abstract void fly();
+abstract void makeSound();
+}
+class Eagle extends Bird
+{
+void fly()
+{
+System.out.println("Eagle flying high in the sky");
+}
+void makeSound()
+{
+System.out.println("Eagle Sound is: Screech Screech");
+}
+}
+class Hawk extends Bird
+{
+void fly()
+{
+System.out.println("Hawk flying throung the air");
+}
+void makeSound()
+{
+System.out.println("Hawk Sound is: Caw Caw");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Bird b=new Eagle();
+b.fly();
+b.makeSound();
+System.out.println();
+
+Bird b1=new Hawk();
+b1.fly();
+b1.makeSound();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Eagle flying high in the sky
+Eagle Sound is: Screech Screech
+
+Hawk flying throung the air
+Hawk Sound is: Caw Caw
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

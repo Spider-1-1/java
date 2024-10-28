@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class prime{
+public static void main(String st[])
+{
+int sum=0;
+for(int i=1;i< =100;i++)
+{
+int count=0;
+for(int j=2;j< i/2;j++)
+{
+if(i%j==0)
+{
+    count++;
+    break;
+}
+
+}
+if(count==0 && i!=1)
+{
+sum=sum+i;
+}
+
+}
+System.out.println("\nThe sum of prime numbers between 1 to 100 is: "+sum);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java prime
+
+The sum of prime numbers between 1 to 100 is: 1064
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

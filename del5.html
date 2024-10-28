@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+
+class A extends Frame implements KeyListener
+{
+TextField b1;
+A()
+{
+b1=new TextField();
+b1.setBounds(100,100,80,30);
+add(b1);
+b1.addKeyListener(this);
+setLayout(null);
+setSize(500,500);
+setVisible(true); 
+requestFocus();
+}
+
+@Override
+public void keyTyped(KeyEvent ke) {
+System.out.println("Key Typed");
+}
+
+@Override
+public void keyPressed(KeyEvent ke) {
+System.out.println("Key pressed");
+}
+
+@Override
+public void keyReleased(KeyEvent ke) {
+System.out.println("Key Released");
+}
+
+}
+
+class B
+{
+public static void main(String st[])
+{
+new A();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+ <img src="delegations\Screenshot 2024-10-19 105948.png" alt="applet1" height="350" width="500">
+
+
+C:\Users\Mohd Jahid\Java Programs>java B
+Key pressed
+Key Typed
+Key Released
+Key pressed
+Key Typed
+Key Released
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

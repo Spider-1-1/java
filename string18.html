@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class string
+{
+public static void main(String st[])
+{
+String str="abcd";
+String str2="dsgc";
+int flag=0;
+if(str.length()!=str2.length())
+{
+System.out.println("string is not a rotation of another string");
+}
+else
+{
+for(int i=0;i< str.length();i++)
+{
+for(int j=0;j< str.length();j++)
+{
+if(str.charAt(i)!=str2.charAt(j))
+{
+flag=1;
+break;
+}
+}
+}
+for(int i=0;i< str.length();i++)
+{
+if(str.charAt(i)==str2.charAt(i))
+{
+flag=1;
+break;
+}
+}
+if(flag==0)
+{
+System.out.println("String is a rotation of another string");
+}
+else
+{
+System.out.println("String is not a rotation of another string");
+}
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+String is not a rotation of another string
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class Array
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the row size: ");
+int row=sc.nextInt();
+System.out.print("Enter the column size: ");
+int col=sc.nextInt();
+int ar[][]=new int[row][col];
+for(int i=0;i< row;i++)
+{
+for(int j=0;j< col;j++)
+{
+System.out.println("Enter the array at location ["+i+"]["+j+"]");
+ar[i][j]=sc.nextInt();
+}
+}
+System.out.println("Enter the second matrix: ");
+int ar2[][]=new int[row][col];
+for(int i=0;i< row;i++)
+{
+for(int j=0;j< col;j++)
+{
+System.out.println("Enter the array at location ["+i+"]["+j+"]");
+ar2[i][j]=sc.nextInt();
+}
+}
+int ar3[][]=new int[row][col];
+for(int i=0;i< row;i++)
+{
+for(int j=0;j< col;j++)
+{
+ar3[i][j]=ar[i][j]+ar2[i][j];
+}
+}
+System.out.println("The sum two matrices are: ");
+for(int i=0;i< row;i++)
+{
+for(int j=0;j< col;j++)
+{
+System.out.print(ar3[i][j]+"\t");
+}
+System.out.print("\n");
+}
+
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Array
+Enter the row size: 3
+Enter the column size: 3
+Enter the array at location [0][0]
+1
+Enter the array at location [0][1]
+2
+Enter the array at location [0][2]
+3
+Enter the array at location [1][0]
+4
+Enter the array at location [1][1]
+5
+Enter the array at location [1][2]
+6
+Enter the array at location [2][0]
+7
+Enter the array at location [2][1]
+8
+Enter the array at location [2][2]
+9
+Enter the second matrix:
+Enter the array at location [0][0]
+1
+Enter the array at location [0][1]
+2
+Enter the array at location [0][2]
+3
+Enter the array at location [1][0]
+4
+Enter the array at location [1][1]
+5
+Enter the array at location [1][2]
+6
+Enter the array at location [2][0]
+7
+Enter the array at location [2][1]
+8
+Enter the array at location [2][2]
+9
+The sum two matrices are:
+2       4       6
+8       10      12
+14      16      18
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

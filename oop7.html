@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Account {
+private String name;
+private long accountNumber;
+private double balance;
+
+
+public Account(String name, long accountNumber, double initialBalance) {
+this.name = name;
+this.accountNumber = accountNumber;
+this.balance = initialBalance;
+}
+
+
+public long getAccountNumber() {
+return accountNumber;
+}
+
+public double getBalance() {
+return balance;
+}
+
+
+public void deposit(double amount) {
+if (amount > 0) {
+balance += amount;
+System.out.println("Deposited: $" + amount);
+} else {
+System.out.println("Invalid deposit amount.");
+}
+}
+
+public void withdraw(double amount) {
+if (amount > 0 && amount <= balance) {
+balance -= amount;
+System.out.println("Withdrew: $" + amount);
+} else {
+System.out.println("Invalid or insufficient funds.");
+}
+}
+
+
+public String toString() {
+return "Account{name='" + name + "', accountNumber=" + accountNumber + ", balance=" + balance + "}";
+}
+}
+
+class Bank {
+private ArrayList< Account> accounts = new ArrayList<>();
+
+
+public void addAccount(Account account) {
+accounts.add(account);
+}
+
+
+public boolean removeAccount(long accountNumber) {
+return accounts.removeIf(account -> account.getAccountNumber() == accountNumber);
+}
+
+
+public void addMoney(long accountNumber, double amount) {
+Account account = findAccount(accountNumber);
+if (account != null) {
+account.deposit(amount);
+} else {
+System.out.println("Account not found.");
+}
+}
+
+
+public void withdrawMoney(long accountNumber, double amount) {
+Account account = findAccount(accountNumber);
+if (account != null) {
+account.withdraw(amount);
+} else {
+System.out.println("Account not found.");
+}
+}
+
+private Account findAccount(long accountNumber) {
+for (Account account : accounts) {
+if (account.getAccountNumber() == accountNumber) {
+return account;
+}
+}
+return null;
+}
+
+
+public void displayAccounts() {
+if (accounts.isEmpty()) {
+System.out.println("No accounts in the bank.");
+} else {
+for (Account account : accounts) {
+System.out.println(account);
+}
+}
+}
+}
+
+class Main {
+public static void main(String[] args) {
+Bank bank = new Bank();
+
+bank.addAccount(new Account("abc", 13454, 300));
+bank.addAccount(new Account("jdk", 24345, 6345));
+
+System.out.println("Accounts in the bank:");
+bank.displayAccounts();
+bank.addMoney(13454, 633);
+bank.withdrawMoney(24345, 34);
+
+System.out.println("\nAccounts in the bank after transactions:");
+bank.displayAccounts();
+bank.removeAccount(13454);
+System.out.println("\nAccounts in the bank after removal:");
+bank.displayAccounts();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Accounts in the bank:
+Account{name='abc', accountNumber=13454, balance=300.0}
+Account{name='jdk', accountNumber=24345, balance=6345.0}
+Deposited: $633.0
+Withdrew: $34.0
+
+Accounts in the bank after transactions:
+Account{name='abc', accountNumber=13454, balance=933.0}
+Account{name='jdk', accountNumber=24345, balance=6311.0}
+
+Accounts in the bank after removal:
+Account{name='jdk', accountNumber=24345, balance=6311.0}
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

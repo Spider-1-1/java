@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Shape
+{
+int radious;
+Shape(int r)
+{
+radious=r;
+}
+double getPerimeter()
+{
+return 0;
+}
+double getArea()
+{
+return 0;
+}
+}
+class Circle extends Shape
+{
+Circle(int r)
+{
+super(r);
+}
+double getPerimeter()
+{
+return 2*3.14*radious;
+}
+double getArea()
+{
+return 3.14*radious*radious;
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Circle c=new Circle(5);
+System.out.println("Perimeter of a circle is: "+c.getPerimeter());
+System.out.println("Area of a circle is: "+c.getArea());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Perimeter of a circle is: 31.400000000000002
+Area of a circle is: 78.5
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class array
+{
+public static void main(String st[])
+{
+int n;
+int sum=0;
+int b=0;
+for(int i=1;i< 600;i++)
+{
+n=i;
+while(n>0)
+{
+b=n%10;
+sum=sum+(b*b*b);
+n=n/10;
+}
+if(sum==i)
+{
+System.out.print(sum+"\t");
+}
+sum=0;
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java array
+1       153     370     371     407
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

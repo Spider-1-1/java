@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+
+interface Searchable {
+boolean search(String keyword);
+}
+
+
+class Document implements Searchable {
+private String content;
+
+
+public Document(String content) {
+this.content = content;
+}
+
+
+@Override
+public boolean search(String keyword) {
+return content.contains(keyword);
+}
+}
+
+
+class WebPage implements Searchable {
+private String url;
+private String content;
+
+
+public WebPage(String url, String content) {
+this.url = url;
+this.content = content;
+}
+
+@Override
+public boolean search(String keyword) {
+return content.contains(keyword);
+}
+
+public String getUrl() {
+return url;
+}
+}
+
+
+class interfaces {
+public static void main(String[] args) {
+
+Document doc = new Document("This is a sample
+ document containing some text.");
+
+
+WebPage page = new WebPage("http://example.com",
+ "This is a sample webpage with various content.");
+
+
+String keyword1 = "sample";
+String keyword2 = "text";
+String keyword3 = "notfound";
+
+System.out.println("Searching in Document:");
+System.out.println("Keyword '" + keyword1 + "':
+ " + doc.search(keyword1)); 
+System.out.println("Keyword '" + keyword2 + "':
+ " + doc.search(keyword2)); 
+System.out.println("Keyword '" + keyword3 + "':
+ " + doc.search(keyword3)); 
+
+System.out.println("\nSearching in WebPage:");
+System.out.println("Keyword '" + keyword1 + "':
+ " + page.search(keyword1)); 
+System.out.println("Keyword '" + keyword2 + "':
+ " + page.search(keyword2)); 
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java interfaces
+Searching in Document:
+Keyword 'sample': true
+Keyword 'text': true
+Keyword 'notfound': false
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

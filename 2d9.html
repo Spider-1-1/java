@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>import java.util.Scanner;
+class matrix
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the matrix rows: ");
+int row=sc.nextInt();
+System.out.print("Enter the matrix columns: ");
+int col=sc.nextInt();
+int ar[][]=new int[row][col];
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+System.out.print("Enter the matrix at location ["+i+"]"+"["+j+"]: ");
+ar[i][j]=sc.nextInt();
+}
+}
+int sum=0;
+for(int i=0;i&lt;row;i++)
+{
+for(int j=0;j&lt;col;j++)
+{
+sum=sum+ar[i][j];
+}
+System.out.println("The sum of row "+(i+1)+" is: "+sum);
+sum=0;
+}
+for(int j=0;j&lt;row;j++)
+{
+for(int i=0;i&lt;col;i++)
+{
+sum=sum+ar[i][j];
+}
+System.out.println("The sum of column "+(j+1)+" is: "+sum);
+sum=0;
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>C:\Users\Mohd Jahid\Java Programs>java matrix
+Enter the matrix rows: 3
+Enter the matrix columns: 3
+Enter the matrix at location [0][0]: 1
+Enter the matrix at location [0][1]: 2
+Enter the matrix at location [0][2]: 3
+Enter the matrix at location [1][0]: 4
+Enter the matrix at location [1][1]: 5
+Enter the matrix at location [1][2]: 6
+Enter the matrix at location [2][0]: 7
+Enter the matrix at location [2][1]: 8
+Enter the matrix at location [2][2]: 9
+The sum of row 1 is: 6
+The sum of row 2 is: 15
+The sum of row 3 is: 24
+The sum of column 1 is: 12
+The sum of column 2 is: 15
+The sum of column 3 is: 18</pre>
+        </div>
+    </div>
+
+</body>
+</html>

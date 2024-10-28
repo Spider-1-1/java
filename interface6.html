@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+interface Drawable
+{
+void draw();
+}
+class Circle implements Drawable
+{
+public void draw()
+{
+System.out.println("Draw a Circle");
+}
+}
+class Rectangle implements Drawable
+{
+public void draw()
+{
+System.out.println("Draw a Rectangle");
+}
+}
+class Triangle implements Drawable
+{
+public void draw()
+{
+System.out.println("Draw a Triangle");
+}
+}
+class interfaces
+{
+public static void main(String st[])
+{
+Circle c=new Circle();
+c.draw();
+Rectangle r=new Rectangle();
+r.draw();
+Triangle t=new Triangle();
+t.draw();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java interfaces
+Draw a Circle
+Draw a Rectangle
+Draw a Triangle
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

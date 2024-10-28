@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Employee
+{
+private String name;
+private String job;
+private int salary;
+void setName(String n)
+{
+name=n;
+}
+void setJob(String j)
+{
+job=j;
+}
+void setSalary(int s)
+{
+salary=s;
+}
+String getName()
+{
+return name;
+}
+String getJob()
+{
+return job;
+}
+int getSalary()
+{
+return salary;
+}
+int calculate(int sal)
+{
+salary=salary+sal;
+return salary;
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Employee obj=new Employee();
+obj.setName("abc");
+obj.setJob("Typist");
+obj.setSalary(1000);
+System.out.println("Name is: "+obj.getName());
+System.out.println("Job Title: "+obj.getJob());
+System.out.println("Current Salary: "+obj.getSalary());
+System.out.println("After Updating The Salary: "+obj.calculate(5000));
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Name is: abc
+Job Title: Typist
+Current Salary: 1000
+After Updating The Salary: 6000
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

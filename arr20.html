@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class array{
+public static void main(String st[])
+{
+int a;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the array size: ");
+a=sc.nextInt();
+int ar[]=new int[a];
+for(int j=0;j< ar.length;j++)
+{
+System.out.println("Enter the array at ["+j+"] location: ");
+ar[j]=sc.nextInt();
+}
+int min=ar[0];
+for(int i=0;i< ar.length;i++)
+{
+if(ar[i]< min)
+{
+min=ar[i];
+}
+}
+System.out.println("The Smallest Number in an array is: "+min);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java array
+Enter the array size:
+5
+Enter the array at [0] location:
+2
+Enter the array at [1] location:
+3
+Enter the array at [2] location:
+5
+Enter the array at [3] location:
+7
+Enter the array at [4] location:
+9
+The Smallest Number in an array is: 2
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

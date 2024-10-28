@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class count
+{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the Amount :");
+int amount = sc.nextInt();
+int n500, n100, n50, n20, n10, n5, n2, n1;
+n500 = n100 = n50 = n20 = n10 = n5 = n2 = n1 = 0;
+if(amount>= 500)
+n500 = amount/500;
+amount -= n500 * 500;
+if(amount >= 100)
+n100 = amount/100;
+amount -= n100 * 100;
+if(amount >= 50)
+n50 = amount/50;
+amount -= n50 * 50;
+if(amount >= 20)
+n20 = amount/20;
+amount -= n20 * 20;
+if(amount >= 10)
+n10 = amount/10;
+amount -= n10 * 10;
+if(amount >= 5)
+n5 = amount/5;
+amount -= n5 * 5;
+if(amount >= 2)
+n2 = amount /2;
+amount -= n2 * 2;
+if(amount >= 1)
+n1 = amount;
+
+System.out.println("Total Number of Notes");
+System.out.println("500 = "+ n500);
+System.out.println("100 = "+ n100);
+System.out.println("50 = "+ n50);
+System.out.println("20 = "+ n20);
+System.out.println("10 = "+ n10);
+System.out.println("5 = "+ n5);
+System.out.println("2 = "+ n2);
+System.out.println("1 = "+ n1);
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java count
+Enter the Amount :
+1000
+Total Number of Notes
+500 = 2
+100 = 0
+50 = 0
+20 = 0
+10 = 0
+5 = 0
+2 = 0
+1 = 0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

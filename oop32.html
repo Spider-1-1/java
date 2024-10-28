@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Student
+{
+private int student_id;
+private String student_name;
+private ArrayList< Integer> grades= new ArrayList<>();
+
+public void setterStudent_id(int id)
+{
+student_id=id;
+}
+public int getterStudent_id()
+{
+return student_id;
+}
+
+public void setterStudent_name(String name)
+{
+student_name=name;
+}
+public String getterStudent_name()
+{
+return student_name;
+}
+
+public void addGrade(int g)
+{
+if(g>0 && g< =100)
+{
+grades.add(g);
+}
+else
+{
+System.out.println("Please provide correct grade");
+}
+}
+public ArrayList< Integer> getterGrade()
+{
+return grades;
+}
+}
+
+class A
+{
+public static void main(String st[])
+{
+Student obj=new Student();
+obj.setterStudent_name("Jahid");
+obj.setterStudent_id(4263);
+obj.addGrade(77);
+obj.addGrade(10);
+
+System.out.println("Student Name is: "+obj.getterStudent_name());
+System.out.println("Student Id is: "+obj.getterStudent_id());
+System.out.println("Student Grade is: "+obj.getterGrade());
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Student Name is: Jahid
+Student Id is: 4263
+Student Grade is: [77, 10]
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

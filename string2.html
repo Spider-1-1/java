@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Arrays;
+import java.util.Scanner;
+class string
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string: ");
+String str=sc.next();
+char value[]=new char[str.length()];
+for(int i=0;i< str.length();i++)
+{
+value[i]=str.charAt(i);
+}
+System.out.println("Deep copy of string is: "+Arrays.toString(value));
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java string
+Enter the string: hello world
+Deep copy of string is: [h, e, l, l, o]
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.applet.Applet;
+import java.awt.*;
+import java.util.Calendar;
+import java.util.Date;
+
+public class applet14 extends Applet implements Runnable
+{
+Thread t;
+Font font;
+Color color;
+public void init()
+{
+setBackground(Color.YELLOW);
+t=null;
+font=new Font("Algerian",Font.ROMAN_BASELINE,50);
+color = Color.RED;
+}
+public void start()
+{
+if(t==null)
+{
+t=new Thread(this);
+t.start();
+}
+}
+public void stop()
+{
+t=null;
+}
+public void run()
+{
+while(Thread.currentThread()==t)
+{
+repaint();
+try
+{
+Thread.currentThread().sleep(1000);
+}
+catch(InterruptedException e)
+{
+System.out.println(e);
+}
+
+}
+}
+public void paint(Graphics g)
+{
+Calendar calendar=Calendar.getInstance();
+Date day=calendar.getTime();
+g.setFont(font);
+g.setColor(color);
+g.drawString(day+"\t ", 20,60 );
+showStatus("This is the Watch.");
+}
+}
+/*< applet code="applet14" height="500",width="600"></>*/
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+    <img src="applets\Screenshot 2024-10-19 094123.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

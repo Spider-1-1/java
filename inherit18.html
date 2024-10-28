@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Animal
+{
+abstract void eat();
+abstract void sleep();
+}
+class Lion extends Animal
+{
+void eat()
+{
+System.out.println("Lion eat meat");
+}
+void sleep()
+{
+System.out.println("Lion sleep 18 hours a day");
+}
+}
+class Tiger extends Animal
+{
+void eat()
+{
+System.out.println("Tiger eat meat");
+}
+void sleep()
+{
+System.out.println("Tiger sleep 16 hours a day");
+}
+}
+class Deer extends Animal
+{
+void eat()
+{
+System.out.println("Deer eat grass");
+}
+void sleep()
+{
+System.out.println("Deer sleep 5 hours a day");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Animal a=new Lion();
+a.eat();
+a.sleep();
+System.out.println();
+
+Animal a1=new Tiger();
+a1.eat();
+a1.sleep();
+System.out.println();
+
+Animal a2=new Deer();
+a2.eat();
+a2.sleep();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Lion eat meat
+Lion sleep 18 hours a day
+
+Tiger eat meat
+Tiger sleep 16 hours a day
+
+Deer eat grass
+Deer sleep 5 hours a day
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

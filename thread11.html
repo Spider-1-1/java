@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class A extends Thread
+{
+public synchronized void run()
+{
+for(int i=0;i< 5;i++)
+{
+System.out.println(getName()+"   "+i);
+}
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+A obj=new A();
+A obj2=new A();
+A obj3=new A();
+
+obj.setName("Thread 1");
+obj2.setName("Thread 2");
+obj3.setName("Thread 3");
+
+obj.start();
+obj2.start();
+obj3.start();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Thread 1   0
+Thread 3   0
+Thread 3   1
+Thread 3   2
+Thread 3   3
+Thread 3   4
+Thread 2   0
+Thread 2   1
+Thread 2   2
+Thread 2   3
+Thread 2   4
+Thread 1   1
+Thread 1   2
+Thread 1   3
+Thread 1   4
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

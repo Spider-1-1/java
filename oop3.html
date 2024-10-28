@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Rectangle
+{
+private float width;
+private float height;
+private float a;
+private float p;
+Rectangle(float w,float h)
+{
+width=w;
+height=h;
+}
+float Area()
+{
+a=width*height;
+return a;
+}
+float Perimeter()
+{
+p=2*(height+width);
+return p;
+}
+}
+
+class Main
+{
+public static void main(String st[])
+{
+Rectangle obj=new Rectangle(3.5f,4.5f);
+System.out.println("Area of rectangle is: "+obj.Area());
+System.out.println("Perimeter of Rectangle is: "+obj.Perimeter());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Area of rectangle is: 15.75
+Perimeter of Rectangle is: 16.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

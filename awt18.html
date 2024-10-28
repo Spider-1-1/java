@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+import java.awt.event.*;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+class calculator extends Frame implements ActionListener {
+TextArea area;
+
+calculator() {
+setSize(700, 700);
+setVisible(true);
+setLayout(new BorderLayout());
+
+Font font = new Font("Arial", Font.BOLD, 30);
+area = new TextArea();
+area.setEditable(true);
+area.setFont(font);
+area.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+ScrollPane scrollPane = new ScrollPane();
+scrollPane.add(area);
+add(scrollPane, BorderLayout.NORTH);
+
+Panel panel = new Panel(new GridLayout(6, 4, 10, 10));
+
+Button b1 = new Button("1");
+Button b2 = new Button("2");
+Button b3 = new Button("3");
+Button b4 = new Button("4");
+Button b5 = new Button("5");
+Button b6 = new Button("6");
+Button b7 = new Button("7");
+Button b8 = new Button("8");
+Button b9 = new Button("9");
+Button b0 = new Button("0");
+Button b00 = new Button("00");
+Button bC = new Button("C");
+Button bp = new Button("+");
+Button bm = new Button("-");
+Button bmul = new Button("*");
+Button bd = new Button("/");
+Button be = new Button("=");
+Button bdot = new Button(".");
+Button bper = new Button("%");
+Button bpre = new Button("<-");
+
+bC.addActionListener(this);
+bpre.addActionListener(this);
+bper.addActionListener(this);
+bmul.addActionListener(this);
+b7.addActionListener(this);
+b8.addActionListener(this);
+b9.addActionListener(this);
+bd.addActionListener(this);
+b4.addActionListener(this);
+b5.addActionListener(this);
+b6.addActionListener(this);
+bm.addActionListener(this);
+b1.addActionListener(this);
+b2.addActionListener(this);
+b3.addActionListener(this);
+bp.addActionListener(this);
+b00.addActionListener(this);
+b0.addActionListener(this);
+bdot.addActionListener(this);
+be.addActionListener(this);
+
+panel.add(bC);
+panel.add(bpre);
+panel.add(bper);
+panel.add(bmul);
+panel.add(b7);
+panel.add(b8);
+panel.add(b9);
+panel.add(bd);
+panel.add(b4);
+panel.add(b5);
+panel.add(b6);
+panel.add(bm);
+panel.add(b1);
+panel.add(b2);
+panel.add(b3);
+panel.add(bp);
+panel.add(b00);
+panel.add(b0);
+panel.add(bdot);
+panel.add(be);
+
+add(panel, BorderLayout.CENTER);
+
+revalidate();
+}
+
+public static void main(String st[]) {
+new calculator();
+}
+
+String pre = "";
+
+public void actionPerformed(ActionEvent ae) {
+String command = ae.getActionCommand();
+
+switch (command) {
+case "C":
+area.setText("");
+break;
+case "=":
+calculateResult();
+break;
+case "<-":
+area.setText(pre);
+break;
+default:
+area.append(command);
+break;
+}
+}
+
+private void calculateResult() {
+String input = area.getText().trim();
+pre = input;
+if (!input.isEmpty()) {
+try {
+ScriptEngineManager mgr = new ScriptEngineManager();
+ScriptEngine engine = mgr.getEngineByName("JavaScript");
+Object result = engine.eval(input);
+
+area.setText(result.toString());
+} catch (ScriptException e) {
+area.setText("Error");
+}
+}
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+<img src="awts\Screenshot 2024-10-19 101737.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

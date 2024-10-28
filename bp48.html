@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.Scanner;
+class batting
+{
+public static void main(String st[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the total runs: ");
+int run=sc.nextInt();
+System.out.print("Enter the total matches: ");
+int match=sc.nextInt();
+System.out.print("Enter the total not-out matches: ");
+int not=sc.nextInt();
+int dismissed=match-not;
+double bat=run/dismissed;
+System.out.println("The Batting average is: "+bat);
+}
+
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java batting
+Enter the total runs: 200
+Enter the total matches: 10
+Enter the total not-out matches: 3
+The Batting average is: 28.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

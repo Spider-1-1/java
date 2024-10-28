@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+package employee;
+
+public class Emp
+{
+String name;
+int empid;
+String category;
+double bpay;
+double hra;
+double da;
+double npay;
+double pf;
+double grosspay;
+double incometax;
+double allowance;
+
+public Emp(String n,int id,String c,double b)
+{
+name=n;
+empid=id;
+category=c;
+bpay=b;
+}
+
+public String getName()
+{
+return name;
+}
+
+public int getEmpid()
+{
+return empid;
+}
+
+public String getCategory()
+{
+return category;
+}
+
+public double getBpay()
+{
+return bpay;
+}
+
+public double getHra()
+{
+hra=bpay*4;
+return hra;
+}
+
+public double getDa()
+{
+da=bpay*6;
+return da;
+}
+
+public double getAllowance()
+{
+allowance=hra+da;
+return allowance;
+}
+
+public double getGrosspay()
+{
+grosspay=bpay+allowance;
+return grosspay;
+}
+
+public double getPf()
+{
+pf=grosspay*0.30;
+return pf;
+}
+
+public double getIncometax()
+{
+incometax=grosspay*0.45;
+return incometax;
+}
+
+public double getNpay()
+{
+npay=grosspay-pf-incometax;
+return npay;
+}
+}
+
+
+
+import employee.Emp;
+
+class Emppay
+{
+public static void main(String st[])
+{
+Emp e=new Emp("abc",24354,"Manager",20000);
+System.out.println("Name is: "+e.getName());
+System.out.println("Employee id is: "+e.getEmpid());
+System.out.println("Employee category is: "+e.getCategory());
+System.out.println("Basic Salary: "+e.getBpay());
+System.out.println("Hra is: "+e.getHra());
+System.out.println("Da is: "+e.getDa());
+System.out.println("Allowance is: "+e.getAllowance());
+System.out.println("Grosspay is: "+e.getGrosspay());
+System.out.println("Pf is: "+e.getPf());
+System.out.println("Income tax is: "+e.getIncometax());
+System.out.println("Net pay is: "+e.getNpay());
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>javac -d . Emp.java
+
+C:\Users\Mohd Jahid\Java Programs>javac pk7.java
+
+C:\Users\Mohd Jahid\Java Programs>java Emppay
+Name is: abc
+Employee id is: 24354
+Employee category is: Manager
+Basic Salary: 20000.0
+Hra is: 80000.0
+Da is: 120000.0
+Allowance is: 200000.0
+Grosspay is: 220000.0
+Pf is: 66000.0
+Income tax is: 99000.0
+Net pay is: 55000.0
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

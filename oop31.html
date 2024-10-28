@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Car
+{
+private String company_name;
+private String model_name;
+private int year;
+private String mileage="70km";
+
+public void setterCompany_name(String name)
+{
+company_name=name;
+}
+public String getterCompany_name()
+{
+return company_name;
+}
+
+public void setterModel_name(String model)
+{
+model_name=model;
+}
+public String getterModel_name()
+{
+return model_name;
+}
+
+public void setterYear(int y)
+{
+year=y;
+}
+public int getterYear()
+{
+return year;
+}
+
+public String getterMileage()
+{
+return mileage;
+}
+}
+
+class A
+{
+public static void main(String st[])
+{
+Car obj=new Car();
+obj.setterCompany_name("TATA");
+obj.setterModel_name("344tsm");
+obj.setterYear(2010);
+
+System.out.println("Company name: "+obj.getterCompany_name());
+System.out.println("Model name: "+obj.getterModel_name());
+System.out.println("Year: "+obj.getterYear());
+System.out.println("Mileage: "+obj.getterMileage());
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Company name: TATA
+Model name: 344tsm
+Year: 2010
+Mileage: 70km
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

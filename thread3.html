@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Sort extends Thread {
+int[] ar;
+
+void getData(int[] ar2) {
+ar = ar2.clone();
+}
+
+public void run() {
+
+for (int i = 0; i < ar.length; i++) {
+for (int j = i + 1; j < ar.length; j++) {
+if (ar[i] > ar[j]) {
+int temp = ar[i];
+ar[i] = ar[j];
+ar[j] = temp;
+}
+}
+}
+}
+
+void show() {
+System.out.println("Sorted Array is: ");
+for (int num : ar) {
+System.out.println(num);
+}
+}
+}
+
+class Main {
+public static void main(String[] st) throws InterruptedException {
+int ar[] = {4, 2, 3, 1, 8, 6, 9, 7};
+
+Sort obj = new Sort();
+Sort obj2 = new Sort();
+Sort obj3 = new Sort();
+
+obj.getData(ar);
+obj2.getData(ar);
+obj3.getData(ar);
+
+obj.start();
+obj2.start();
+obj3.start();
+
+obj.show();
+obj2.show();
+obj3.show();
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Sorted Array is:
+1
+2
+3
+4
+6
+7
+8
+9
+Sorted Array is:
+1
+2
+3
+4
+6
+7
+8
+9
+Sorted Array is:
+1
+2
+3
+4
+6
+7
+8
+9
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

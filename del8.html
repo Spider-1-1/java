@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.awt.*;
+
+class A extends Frame
+{
+A()
+{
+CheckboxGroup grp=new CheckboxGroup();
+
+Checkbox c1=new Checkbox("10th",grp,true);
+Checkbox c2=new Checkbox("12th",grp,false);
+Checkbox c3=new Checkbox("Graduate",grp,false);
+Checkbox c4=new Checkbox("Post Graduate",grp,false);
+
+Checkbox c5=new Checkbox("10th");
+Checkbox c6=new Checkbox("12th");
+Checkbox c7=new Checkbox("Graduate");
+Checkbox c8=new Checkbox("Post Graduate");
+
+setLayout(null);
+
+c1.setBounds(40,40,100,30);
+c2.setBounds(40,70,100,30);
+c3.setBounds(40,100,100,30);
+c4.setBounds(40,140,100,30);
+c5.setBounds(40,180,40,30);
+c6.setBounds(100,180,40,30);
+c7.setBounds(150,180,80,30);
+c8.setBounds(200,180,100,30);
+
+
+add(c1);
+add(c2);
+add(c3);
+add(c4);
+add(c5);
+add(c6);
+add(c7);
+add(c8);
+setSize(500,500);
+setVisible(true);
+}
+}
+
+class B
+{
+public static void main(String st[])
+{
+new A();
+}
+}
+
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+ <img src="delegations\Screenshot 2024-10-19 110113.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

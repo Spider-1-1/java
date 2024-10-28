@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+abstract class Person
+{
+abstract void eat();
+abstract void exercise();
+}
+class Athlete extends Person
+{
+void eat()
+{
+System.out.println("Athlete eat food which is full of fibre,iron,calcium,etc..");
+}
+void exercise()
+{
+System.out.println("Athlete do excersice daily to build strength and endurance");
+}
+}
+class LazyPerson extends Person
+{
+void eat()
+{
+System.out.println("LazyPerson eat food which is full of calories and high sugar");
+}
+void exercise()
+{
+System.out.println("LazyPerson is not exercise Result fatty body");
+}
+}
+class inherit
+{
+public static void main(String st[])
+{
+Person p=new Athlete();
+p.eat();
+p.exercise();
+System.out.println();
+
+Person p1=new LazyPerson();
+p1.eat();
+p1.exercise();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java inherit
+Athlete eat food which is full of fibre,iron,calcium,etc..
+Athlete do excersice daily to build strength and endurance
+
+LazyPerson eat food which is full of calories and high sugar
+LazyPerson is not exercise Result fatty body
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

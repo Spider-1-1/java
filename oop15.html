@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class MusicLibrary
+{
+ArrayList< String> songs=new ArrayList<>();
+String random;
+static int i=0;
+MusicLibrary(String s)
+{
+songs.add(s);
+}
+void addSongs(String s)
+{
+if(songs.equals(s) || songs.isEmpty())
+{
+System.out.println("Song is already exists or it is empty");
+}
+else
+{
+songs.add(s);
+System.out.println("Song "+s+" is added Successfully");
+}
+}
+void removeSongs(String s)
+{
+if(songs.isEmpty())
+{
+System.out.println("No songs is available");
+}
+else if(!songs.contains(s))
+{
+System.out.println("Can't find the Song");
+}
+else
+{
+songs.remove(s);
+System.out.println("Song "+s+" is removed");
+}
+}
+void play()
+{
+if(songs.isEmpty())
+{
+System.out.println("No songs available");
+}
+else
+{
+int index=i;
+String song=songs.get(index);
+System.out.println("Playing "+song);
+}
+}
+void show()
+{
+for(String s: songs)
+{
+System.out.println(s);
+}
+}
+}
+class Main
+{
+public static void main(String st[])
+{
+MusicLibrary obj=new MusicLibrary("Fighter");
+obj.addSongs("who cares");
+obj.addSongs("heart");
+
+obj.removeSongs("heart");
+obj.play();
+
+obj.show();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Song who cares is added Successfully
+Song heart is added Successfully
+Song heart is removed
+Playing Fighter
+Fighter
+who cares
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

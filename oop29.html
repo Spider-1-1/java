@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+class Employee 
+{
+private int employee_id;
+private String employee_name;
+private double employee_salary=30000;
+
+public void setterEmployee_id(int id)
+{
+employee_id=id;
+}
+public int getterEmployee_id()
+{
+return employee_id;
+}
+
+public void setterEmployee_name(String n)
+{
+employee_name=n;
+}
+public String getterEmployee_name()
+{
+return employee_name;
+}
+public double getterEmployee_salary()
+{
+return employee_salary;
+}
+}
+
+class A
+{
+public static void main(String st[])
+{
+Employee obj=new Employee();
+obj.setterEmployee_id(353544);
+obj.setterEmployee_name("abc");
+
+System.out.println("Employee id is: "+obj.getterEmployee_id());
+System.out.println("Employee name is: "+obj.getterEmployee_name());
+System.out.println(obj.getterEmployee_salary());
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java A
+Employee id is: 353544
+Employee name is: abc
+30000.0
+    
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

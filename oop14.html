@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.util.ArrayList;
+
+class Student
+{
+private String name;
+private String st_id;
+Student(String n,String id)
+{
+name=n;
+st_id=id;
+}
+String getName()
+{
+return name;
+}
+String getId()
+{
+return st_id;
+}
+public String toString()
+{
+return "Student Name is: "+name+"    Student id is: "+st_id;
+}
+}
+class Teacher
+{
+private String tname;
+private String t_id;
+Teacher(String n,String id)
+{
+tname=n;
+t_id=id;
+}
+String gettName()
+{
+return tname;
+}
+String gettId()
+{
+return t_id;
+}
+public String toString()
+{
+return "Teacher Name is: "+tname+"    Teacher id is: "+t_id;
+}
+}
+class School
+{
+ArrayList< Student> students=new ArrayList<>();
+ArrayList< Teacher> teachers=new ArrayList<>();
+ArrayList< String> clas=new ArrayList<>(); 
+void addStudent(Student s)
+{
+
+students.add(s);
+}
+void removeStudent(String id)
+{
+boolean tr=students.removeIf(student->student.getId().equals(id));
+if(tr)
+{
+System.out.println("Student is removed");
+}
+else
+{
+System.out.println("Can't the find the Id");
+}
+}
+void addTeacher(Teacher t)
+{
+teachers.add(t);
+}
+void removeTeacher(String id)
+{
+boolean tr=teachers.removeIf(teacher->teacher.gettId().equals(id));
+if(tr)
+{
+System.out.println("Teacher is removed");
+}
+else
+{
+System.out.println("Can't find the teacher id");
+}
+}
+void showStudents()
+{
+for(Student ss : students)
+{
+System.out.println(ss);
+}
+}
+void showTeachers()
+{
+for(Teacher tt : teachers)
+{
+System.out.println(tt);
+}
+}
+void createClasses(String c)
+{
+clas.add(c);
+}
+void showClasses()
+{
+for(String c:clas)
+{
+System.out.println(c);
+}
+}
+}
+class Main
+{
+public static void main(String st[])
+{
+School obj=new School();
+obj.addStudent(new Student("Jahid","4263/22"));
+obj.addStudent(new Student("Harshit","4264/22"));
+obj.addStudent(new Student("Rahul","4269/22"));
+
+obj.addTeacher(new Teacher("Chetan","21232"));
+obj.addTeacher(new Teacher("Gaurav","53533"));
+
+obj.removeStudent("4269/22");
+obj.removeTeacher("53533");
+
+obj.createClasses("10th");
+obj.createClasses("12th");
+
+obj.showStudents();
+obj.showTeachers();
+obj.showClasses();
+}
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Student is removed
+Teacher is removed
+Student Name is: Jahid    Student id is: 4263/22
+Student Name is: Harshit    Student id is: 4264/22
+Teacher Name is: Chetan    Teacher id is: 21232
+10th
+12th
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

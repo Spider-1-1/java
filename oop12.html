@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+class Airplane {
+private String flightNumber;
+private String destination;
+private LocalDateTime departureTime;
+
+
+public Airplane(String flightNumber, String destination,
+ String departureTime) {
+this.flightNumber = flightNumber;
+this.destination = destination;
+DateTimeFormatter formatter = 
+DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+this.departureTime = LocalDateTime.parse(departureTime, formatter);
+}
+
+public void flightStatus(String currentTime) {
+LocalDateTime now = LocalDateTime.parse(currentTime,
+ DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+if (now.isBefore(departureTime)) {
+System.out.println("Flight " + flightNumber + " to " +
+ destination + " is scheduled to depart at " + departureTime);
+} else {
+System.out.println("Flight " + flightNumber + " to " +
+ destination + " has already departed or is delayed.");
+}
+}
+
+public void delay(String currentTime) {
+LocalDateTime now = LocalDateTime.parse(currentTime,
+ DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+if (now.isBefore(departureTime)) {
+System.out.println("Flight " + flightNumber + " to " +
+ destination + " is scheduled.");
+} else {
+long minutesDelayed = java.time.Duration.between(departureTime,
+ now).toMinutes();
+System.out.println("Flight " + flightNumber + " to " +
+ destination + " is delayed by " + minutesDelayed + " minutes.");
+}
+}
+}
+
+class Main {
+public static void main(String[] args) {
+Airplane flight = new Airplane("23443", "Delhi", "2024-09-05 10:58:34");
+flight.flightStatus("2024-09-05 10:58:34"); 
+flight.delay("2024-09-05 11:34:43");
+}
+}
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java Main
+Flight 23443 to Delhi has already departed or is delayed.
+Flight 23443 to Delhi is delayed by 36 minutes.
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>
