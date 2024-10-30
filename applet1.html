@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+import java.applet.Applet;
+
+import java.awt.Graphics;
+
+
+public class HelloWorldApplet extends Applet {
+
+private String message;
+
+
+public void init() {
+
+message = getParameter("message");
+
+}
+
+
+public void paint(Graphics g) {
+
+g.drawString(message, 20, 20);
+
+}
+
+}
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;Hello World Applet&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;applet code="HelloWorldApplet.class" width="500" height="500"&gt;
+
+&lt;param name="message" value="Hello World"&gt;
+
+&lt;/applet&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+    <img src="applets\Screenshot 2024-10-19 092959.png" alt="applet1" height="350" width="500">
+
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>
